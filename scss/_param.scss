@@ -1,0 +1,13 @@
+$circe: "Circe", sans-serif;
+$white: #fff;
+$gray: #97A6AE;
+$dark-gray: #747474;
+$black29: #292929;
+$orange: #FC5B37;
+$green: #318F89;
+
+@mixin title-font {
+  font-weight: bold;
+  font-size: 4.5rem;
+  line-height: 6.5rem;
+}

@@ -1,0 +1,218 @@
+@import "param";
+
+.intro {
+  margin-bottom: 16rem;
+
+  &__item {
+    position: relative;
+    background-color: #F2F7FB;
+  }
+
+  &__background-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 70.7rem;
+    height: 100%;
+    background: linear-gradient(186.13deg, #2F8D88 4.85%, #6DB197 105.45%);
+  }
+
+  &__item-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__block {
+    &--info-cards {
+      margin-right: 7.7rem;
+    }
+  }
+
+  &__info-card {
+    display: flex;
+    align-items: center;
+    width: 28.4rem;
+    min-height: 10.6rem;
+    padding: 0 2rem;
+    border-radius: 3rem;
+    background-color: rgba(255, 255, 255, 0.27);
+  }
+
+  &__card-block-icon {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.6rem;
+    height: 6.6rem;
+    margin-right: 1.8rem;
+    border-radius: 2rem;
+    background-color: $white;
+
+    > svg {
+      width: 3rem;
+      height: 3rem;
+
+      path {
+        fill: #318F89;
+      }
+    }
+  }
+
+  &__card-text {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: $white;
+  }
+
+  &__image-block {
+    width: auto;
+    height: 61.3rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__above-title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: $orange;
+  }
+
+  &__title {
+    display: flex;
+    margin-bottom: 2.4rem;
+    @include title-font;
+
+    &--money {
+      margin-top: -1.5rem;
+      margin-left: 0.3rem;
+      font-size: 2.1rem;
+      color: $green;
+    }
+  }
+
+  &__list {
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+
+    > li {
+      list-style-type: disc;
+      padding-left: 2.5rem;
+      margin-bottom: 1.7rem;
+      font-size: 1.7rem;
+      line-height: 1.97rem;
+
+      &:nth-child(odd)::marker {
+        color: $orange;
+      }
+
+      &:nth-child(even)::marker {
+        color: $green;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 5.8rem;
+    padding: 0 1.3rem 0 2.6rem;
+    margin-right: 3.2rem;
+    border-radius: 100rem;
+    background: linear-gradient(87.94deg, #F76B2A 3.98%, #FC5A37 78.77%), #ACACAC;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.98rem;
+    color: $white;
+
+    > svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-left: 1.4rem;
+
+      > circle {
+        fill: $white;
+        width: 100%;
+        height: 100%;
+      }
+
+      > path {
+        stroke: #FC7637;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.98rem;
+    text-decoration: underline;
+    color: #171923;
+
+    > svg {
+      width: 0.9rem;
+      height: 1.6rem;
+      margin-left: 0.9rem;
+
+      > path {
+        stroke: #171923;
+      }
+    }
+  }
+
+  &__info-block {
+  }
+
+  &__info-block-icon {
+  }
+
+  &__info-block-text {
+  }
+
+  &__info-text {
+    &--gray {
+    }
+
+    &--bold {
+    }
+  }
+
+  &__pagination-block {
+  }
+
+  &__pagination {
+  }
+
+  &__navigation {
+  }
+
+  &__navigation-left {
+  }
+
+  &__navigation-time-block {
+  }
+
+  &__navigation-right {
+  }
+
+  &__pagination-text {
+  }
+}
