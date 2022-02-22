@@ -72,6 +72,7 @@
   &__image-block {
     width: auto;
     height: 61.3rem;
+    margin-right: 4rem;
 
     > img {
       width: 100%;
@@ -135,6 +136,7 @@
     width: auto;
     height: 5.8rem;
     padding: 0 1.3rem 0 2.6rem;
+    margin-bottom: 7rem;
     margin-right: 3.2rem;
     border-radius: 100rem;
     background: linear-gradient(87.94deg, #F76B2A 3.98%, #FC5A37 78.77%), #ACACAC;
@@ -181,9 +183,19 @@
   }
 
   &__info-block {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    min-height: 10.6rem;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    background-color: #E2ECF2;
   }
 
   &__info-block-icon {
+    width: 2.9rem;
+    height: 2.9rem;
+    margin-right: 1.7rem;
   }
 
   &__info-block-text {
@@ -191,30 +203,198 @@
 
   &__info-text {
     &--gray {
+      margin-bottom: 0.9rem;
+      font-size: 1.6rem;
+      line-height: 1.88rem;
+      color: $gray;
     }
 
     &--bold {
+      font-weight: bold;
+      font-size: 1.8rem;
+      line-height: 2.18rem;
     }
   }
 
   &__pagination-block {
+    background-color: #E2ECF2;
+  }
+
+  &__pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 9.5rem;
   }
 
   &__pagination {
+    width: fit-content;
+    font-size: 2rem;
+    line-height: 2.32rem;
+    letter-spacing: -0.15em;
+    color: $gray;
+
+    > .swiper-pagination-current {
+      font-weight: bold;
+      font-size: 3rem;
+      line-height: 3.63rem;
+      letter-spacing: 0;
+      color: #171923;
+    }
+
+    > .swiper-pagination-total {
+      letter-spacing: 0;
+    }
   }
 
   &__navigation {
-  }
-
-  &__navigation-left {
+    display: flex;
+    align-items: center;
   }
 
   &__navigation-time-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 100%;
+    background-color: #C4CEDA;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      z-index: 2;
+      background-color: #C4CEDA;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      z-index: 3;
+      background-color: #4C9FA3;
+    }
+
+    &.animate {
+      &:before {
+        z-index: 3;
+        animation: mask-left 5s infinite steps(1, end);
+      }
+
+      &:after {
+        animation: mask-right 5s infinite steps(1, end);
+      }
+
+      .intro__navigation-time-line {
+        animation: line 5s infinite linear;
+      }
+    }
   }
 
-  &__navigation-right {
+  &__navigation-time-body {
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-radius: 100%;
+    background-color: #E2ECF2;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 100%;
+      background-color: #4C9FA3;
+    }
+  }
+
+  &__navigation-time-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #4C9FA3;
+    }
+  }
+
+  &__navigation-arrow {
+    > svg {
+      width: 0.9rem;
+      height: 1.6rem;
+
+      path {
+        stroke: #373D4D;
+      }
+    }
+
+    &--left {
+      margin-right: 3rem;
+    }
+
+    &--right {
+      margin-left: 3rem;
+    }
   }
 
   &__pagination-text {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.98rem;
+  }
+}
+
+
+
+
+@keyframes line {
+  0% {}
+  92% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mask-left {
+  0% {
+    visibility: visible;
+  }
+  46%,
+  92% {
+    visibility: hidden;
+  }
+}
+
+@keyframes mask-right {
+  0% {
+    visibility: hidden;
+  }
+  46%,
+  92% {
+    visibility: visible;
   }
 }
