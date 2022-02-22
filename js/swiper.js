@@ -34,4 +34,10 @@ const intro_slider = new Swiper('.intro', {
         delay: 4600,
         disableOnInteraction: true,
     },
+
+    on: {
+        autoplayStop: function (swiper) {
+            $('.intro__navigation-time-block').removeClass('animate');
+        }
+    }
 });
