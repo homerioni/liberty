@@ -394,12 +394,13 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -1;
+  z-index: 0;
   width: 70.7rem;
   height: 100%;
   background: linear-gradient(186.13deg, #2F8D88 4.85%, #6DB197 105.45%);
 }
 .intro__item-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,6 +421,7 @@ body {
   width: 28.4rem;
   min-height: 10.6rem;
   padding: 0 2rem;
+  margin-bottom: 2.8rem;
   border-radius: 3rem;
   background-color: rgba(255, 255, 255, 0.27);
 }
