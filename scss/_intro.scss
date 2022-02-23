@@ -302,15 +302,22 @@
       &:before {
         z-index: 3;
         animation: mask-left 5s infinite steps(1, end);
+        animation-play-state: inherit;
       }
 
       &:after {
         animation: mask-right 5s infinite steps(1, end);
+        animation-play-state: inherit;
       }
 
       .intro__navigation-time-line {
         animation: line 5s infinite linear;
+        animation-play-state: inherit;
       }
+    }
+
+    &.pause {
+      animation-play-state: paused;
     }
   }
 

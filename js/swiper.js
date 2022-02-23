@@ -36,8 +36,8 @@ const intro_slider = new Swiper('.intro', {
     },
 
     on: {
-        autoplayStop: function (swiper) {
+        autoplayStop: function () {
             $('.intro__navigation-time-block').removeClass('animate');
-        }
+        },
     }
 });
