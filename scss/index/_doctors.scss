@@ -1,0 +1,110 @@
+@import "../param";
+
+.doctors {
+  margin-bottom: 18rem;
+
+  &__title-block {
+    margin-bottom: 6.5rem;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    @include title-font;
+  }
+
+  &__description {
+    width: 66.5rem;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 36.5rem;
+    min-height: 59rem;
+    padding: 2rem;
+    border-radius: 4rem;
+    background-color: #E2ECF2;
+  }
+
+  &__image-block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 32.2rem;
+    height: 30.6rem;
+    margin-bottom: 3rem;
+    border-radius: 3.2rem;
+    background-color: $white;
+    overflow: hidden;
+    box-shadow: 1rem 1rem 4rem 0 rgba(55, 55, 55, 0.3);
+
+    > img {
+      width: 95%;
+      height: 95%;
+      object-fit: contain;
+    }
+  }
+
+  &__info-block {
+    padding: 1rem;
+  }
+
+  &__special {
+    margin-bottom: 1.4rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: #4EBB9F;
+  }
+
+  &__name {
+    margin-bottom: 2.4rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+  }
+
+  &__line {
+    width: 2px;
+    height: 6.3rem;
+    border-radius: 3rem;
+    background-color: #C9D5DC;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    border-top: 2px solid #C9D5DC;
+  }
+
+  &__total-work {
+    margin-top: 1rem;
+  }
+
+  &__work {
+    margin-top: 1rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  &__work-age {
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+  }
+}
