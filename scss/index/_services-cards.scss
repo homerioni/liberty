@@ -14,8 +14,7 @@
     @include title-font;
   }
 
-  &__btn {
-  }
+  &__btn {}
 
   &__cards {
     display: flex;
@@ -57,7 +56,10 @@
     width: 8.1rem;
     height: 8.2rem;
     border-radius: 100%;
-    background: linear-gradient(195.05deg, #318E88 -22.32%, #73C1A8 96.92%), #ACACAC;
+    background: linear-gradient(195.05deg, #318E88 -22.32%, #73C1A8 96.92%),
+    linear-gradient(87.94deg, #F76B2A 3.98%, #FC5A37 78.77%),
+    linear-gradient(0deg, #ACACAC, #ACACAC);
+    box-shadow: 0.1rem 0.1rem 0.53rem 0 rgba(255, 255, 255, 0.6) inset;
 
     > img {
       width: 3.6rem;
