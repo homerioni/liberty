@@ -1,0 +1,130 @@
+@import "../param";
+
+.about-numbers {
+  margin-bottom: 16rem;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 44rem;
+    padding: 0 7.5rem;
+    border-radius: 4rem;
+    background-color: $white;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 66.5rem;
+    height: 100%;
+    border-radius: 4rem 0 0 4rem;
+    background: linear-gradient(186.13deg, #2F8D88 4.85%, #6DB197 105.45%);
+  }
+
+  &__text-block {
+    position: relative;
+    max-width: 39.5rem;
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+    @include title-font;
+    color: $white;
+  }
+
+  &__description {
+    margin-bottom: 3.8rem;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    color: $white;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 25.4rem;
+    min-height: 5.8rem;
+    padding: 0 1.7rem 0 3.1rem;
+    border-radius: 100rem;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.46)),
+    linear-gradient(87.94deg, #7CCEBB 3.98%, #55B39A 78.77%),
+    linear-gradient(0deg, #ACACAC, #ACACAC);
+    box-shadow: 0.09rem 0.09rem 0.53rem 0px rgba(255, 255, 255, 0.6) inset;
+    box-shadow: 0 0.88rem 2.63rem 0 rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.93rem;
+    color: #1A6958;
+
+    > svg {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      circle {
+        width: 100%;
+        height: 100%;
+        fill: $white;
+      }
+
+      path {
+        stroke: #1A6958;
+      }
+    }
+  }
+
+  &__image-block {
+    flex: none;
+    position: relative;
+    width: 46.7rem;
+    height: 49rem;
+    margin-top: -5rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+
+  &__image-block-bg {
+    position: relative;
+    width: 40rem;
+    height: 25.9rem;
+    margin-left: -12rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info-block {
+    position: relative;
+    width: 21rem;
+  }
+
+  &__info-item {
+    margin-bottom: 5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info-number {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+  }
+
+  &__info-text {
+    font-size: 1.6rem;
+    line-height: 1.86rem;
+  }
+}
