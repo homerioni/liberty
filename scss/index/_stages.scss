@@ -14,9 +14,14 @@
     @include title-font;
   }
 
-  &__navigation-block {}
+  &__navigation-block {
+    display: flex;
+    align-items: center;
+  }
 
-  &__pagination {}
+  &__pagination {
+    margin-right: 8rem;
+  }
 
   &__navigation-time-block {}
 

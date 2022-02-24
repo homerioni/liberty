@@ -4,17 +4,8 @@
   margin-bottom: 16rem;
 
   &__title-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 8.7rem;
   }
-
-  &__title {
-    @include title-font;
-  }
-
-  &__btn {}
 
   &__cards {
     display: flex;

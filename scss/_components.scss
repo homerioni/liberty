@@ -28,6 +28,9 @@
   }
 
   &__arrow {
+    width: 3rem;
+    text-align: center;
+
     > svg {
       width: 0.9rem;
       height: 1.6rem;
@@ -38,11 +41,11 @@
     }
 
     &--left {
-      margin-right: 3rem;
+      margin-right: 2rem;
     }
 
     &--right {
-      margin-left: 3rem;
+      margin-left: 2rem;
     }
   }
 
@@ -160,5 +163,53 @@
   50%,
   100% {
     visibility: visible;
+  }
+}
+
+
+
+
+.title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    max-width: 100rem;
+    @include title-font;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 24.4rem;
+    height: 5.8rem;
+    padding: 0 2rem 0 3rem;
+    margin-right: 3.2rem;
+    border-radius: 100rem;
+    background: linear-gradient(87.94deg, #F76B2A 3.98%, #FC5A37 78.77%),
+    linear-gradient(0deg, #ACACAC, #ACACAC);
+    box-shadow: 0.1rem 0.1rem 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 132, 75, 0.3);
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.98rem;
+    color: $white;
+
+    > svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-left: 1.4rem;
+
+      > circle {
+        fill: $white;
+        width: 100%;
+        height: 100%;
+      }
+
+      > path {
+        stroke: #FC7637;
+      }
+    }
   }
 }

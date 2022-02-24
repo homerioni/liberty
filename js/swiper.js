@@ -58,6 +58,7 @@ const stages_slider = new Swiper('.stages__slider', {
     slidesPerView: 4.42,
     speed: 400,
     spaceBetween: 45,
+    allowTouchMove: false,
 
     navigation: {
         nextEl: '.stages__navigation-arrow-right',
@@ -110,6 +111,7 @@ const stages_slider = new Swiper('.stages__slider', {
                 $('.stages__slider').removeClass('last');
             } else {
                 $('.stages__wrapper').css('transform', 'translateX(' + (slider.previousTranslate - 407) + 'px)');
+                items.removeClass('last');
             }
             $('.stages__navigation-time-block').removeClass('animate');
         },
