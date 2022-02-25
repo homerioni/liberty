@@ -2214,6 +2214,9 @@ body {
 .video-reviews__title-block {
   margin-bottom: 5.5rem;
 }
+.video-reviews__navigation-time-body {
+  background-color: #F2F7FB;
+}
 .video-reviews__item {
   min-height: 49.4rem;
   padding: 2rem 2rem 3rem 2rem;
@@ -2263,21 +2266,41 @@ body {
   font-size: 2.5rem;
   height: 3.2rem;
 }
+.video-reviews__item-rating-svg {
+  width: 2.5rem;
+  height: 2.3rem;
+  margin-right: 0.9rem;
+}
+.video-reviews__item-rating-svg > img {
+  width: 100%;
+  height: 100%;
+}
+.video-reviews__item-rating-svg .orange,
+.video-reviews__item-rating-svg .green {
+  display: none;
+}
+.video-reviews__item-rating-svg.orange .empty {
+  display: none;
+}
+.video-reviews__item-rating-svg.orange .orange {
+  display: block;
+  -webkit-box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 132, 75, 0.3);
+          box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 132, 75, 0.3);
+}
+.video-reviews__item-rating-svg.green .empty {
+  display: none;
+}
+.video-reviews__item-rating-svg.green .green {
+  display: block;
+  -webkit-box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(233, 240, 245, 0.3);
+          box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(233, 240, 245, 0.3);
+}
 .video-reviews__item-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0 0.5rem;
-}
-.video-reviews__item-rating > svg {
-  width: 2.4rem;
-  height: 2.2rem;
-}
-.video-reviews__item-rating > svg path {
-  fill: #E2ECF2;
-}
-.video-reviews__item-rating > svg.orange path {
-  fill: #FC5B37;
-}
-.video-reviews__item-rating > svg.green path {
-  fill: #318F89;
+  margin-bottom: 0.8rem;
 }
 .video-reviews__item-rating-text {
   padding: 0 0.5rem;

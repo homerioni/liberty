@@ -7,22 +7,8 @@
     margin-bottom: 5.5rem;
   }
 
-  &__navigation-block {
-  }
-
-  &__pagination {
-  }
-
-  &__navigation-arrow-left {
-  }
-
-  &__navigation-time-block {
-  }
-
   &__navigation-time-body {
-  }
-
-  &__navigation-arrow-right {
+    background-color: #F2F7FB;
   }
 
   &__slider {
@@ -80,29 +66,48 @@
     height: 3.2rem;
   }
 
-  &__item-rating {
-    padding: 0 0.5rem;
+  &__item-rating-svg {
+    width: 2.5rem;
+    height: 2.3rem;
+    margin-right: 0.9rem;
 
-    > svg {
-      width: 2.4rem;
-      height: 2.2rem;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
 
-      path {
-        fill: #E2ECF2;
+    .orange,
+    .green {
+      display: none;
+    }
+
+    &.orange {
+      .empty {
+        display: none;
       }
 
-      &.orange {
-        path {
-          fill: $orange;
-        }
-      }
-
-      &.green {
-        path {
-          fill: $green;
-        }
+      .orange {
+        display: block;
+        box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 132, 75, 0.3);
       }
     }
+
+    &.green {
+      .empty {
+        display: none;
+      }
+
+      .green {
+        display: block;
+        box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(233, 240, 245, 0.3);
+      }
+    }
+  }
+
+  &__item-rating {
+    display: flex;
+    padding: 0 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
   &__item-rating-text {

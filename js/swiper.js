@@ -173,3 +173,57 @@ const placement_slider_orange = new Swiper('.placement__image-slider--orange', {
         disableOnInteraction: true,
     },
 });
+
+const video_reviews_slider = new Swiper('.video-reviews__slider', {
+    direction: 'horizontal',
+    slidesPerView: 4,
+    loop: true,
+    speed: 400,
+    spaceBetween: 45,
+
+    navigation: {
+        nextEl: '.video-reviews__navigation-arrow-right',
+        prevEl: '.video-reviews__navigation-arrow-left',
+    },
+
+    pagination: {
+        el: '.video-reviews__pagination',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        formatFractionTotal: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+    },
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+
+    on: {
+        init: function () {
+            $('.video-reviews__navigation-time-block').addClass('animate');
+        },
+        autoplayStop: function () {
+            $('.video-reviews__navigation-time-block').removeClass('animate');
+        },
+        slideChange: function () {
+            $('.video-reviews__navigation-time-block').removeClass('animate');
+        },
+        transitionEnd: function (slider) {
+            if (slider.autoplay.running) {
+                $('.video-reviews__navigation-time-block').addClass('animate');
+            }
+        },
+    }
+});
