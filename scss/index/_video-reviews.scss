@@ -7,8 +7,17 @@
     margin-bottom: 5.5rem;
   }
 
+  &__navigation-block {
+    display: flex;
+    align-items: center;
+  }
+
   &__navigation-time-body {
     background-color: #F2F7FB;
+  }
+
+  &__pagination {
+    margin-right: 8rem;
   }
 
   &__slider {
