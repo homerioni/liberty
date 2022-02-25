@@ -122,3 +122,54 @@ const stages_slider = new Swiper('.stages__slider', {
         },
     }
 });
+
+const placement_slider_green = new Swiper('.placement__image-slider--green', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    speed: 400,
+
+    pagination: {
+        el: '.placement__image-pagination--green',
+        type: 'bullets',
+        clickable: true,
+    },
+
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: true,
+    },
+});
+
+const placement_slider_lilac = new Swiper('.placement__image-slider--lilac', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    speed: 400,
+
+    pagination: {
+        el: '.placement__image-pagination--lilac',
+        type: 'bullets',
+        clickable: true,
+    },
+
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: true,
+    },
+});
+
+const placement_slider_orange = new Swiper('.placement__image-slider--orange', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    speed: 400,
+
+    pagination: {
+        el: '.placement__image-pagination--orange',
+        type: 'bullets',
+        clickable: true,
+    },
+
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: true,
+    },
+});
