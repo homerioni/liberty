@@ -2107,6 +2107,8 @@ body {
   width: 100%;
   height: 30.6rem;
   border-radius: 3.2rem;
+  -webkit-box-shadow: 1rem 1rem 4rem 0 rgba(219, 230, 237, 0.74);
+          box-shadow: 1rem 1rem 4rem 0 rgba(219, 230, 237, 0.74);
 }
 .placement__image-block {
   width: 100%;
@@ -2204,4 +2206,82 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 1.81rem;
+}
+
+.video-reviews {
+  margin-bottom: 17rem;
+}
+.video-reviews__title-block {
+  margin-bottom: 5.5rem;
+}
+.video-reviews__item {
+  min-height: 49.4rem;
+  padding: 2rem 2rem 3rem 2rem;
+  border-radius: 4rem;
+  background-color: #fff;
+}
+.video-reviews__image-block {
+  position: relative;
+  width: 100%;
+  height: 25.9rem;
+  margin-bottom: 3.5rem;
+  border-radius: 3.2rem;
+  overflow: hidden;
+  -webkit-box-shadow: 1rem 1rem 4rem 0 rgba(219, 230, 237, 0.74);
+          box-shadow: 1rem 1rem 4rem 0 rgba(219, 230, 237, 0.74);
+}
+.video-reviews__image-block > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.video-reviews__item-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 9.3rem;
+  height: 9.3rem;
+}
+.video-reviews__item-btn > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.video-reviews__item-description {
+  padding: 0 0.5rem;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+}
+.video-reviews__item-title {
+  padding: 0 0.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  height: 3.2rem;
+}
+.video-reviews__item-rating {
+  padding: 0 0.5rem;
+}
+.video-reviews__item-rating > svg {
+  width: 2.4rem;
+  height: 2.2rem;
+}
+.video-reviews__item-rating > svg path {
+  fill: #E2ECF2;
+}
+.video-reviews__item-rating > svg.orange path {
+  fill: #FC5B37;
+}
+.video-reviews__item-rating > svg.green path {
+  fill: #318F89;
+}
+.video-reviews__item-rating-text {
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  line-height: 3.2rem;
+  color: #97A5AE;
 }

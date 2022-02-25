@@ -1,0 +1,114 @@
+@import "../param";
+
+.video-reviews {
+  margin-bottom: 17rem;
+
+  &__title-block {
+    margin-bottom: 5.5rem;
+  }
+
+  &__navigation-block {
+  }
+
+  &__pagination {
+  }
+
+  &__navigation-arrow-left {
+  }
+
+  &__navigation-time-block {
+  }
+
+  &__navigation-time-body {
+  }
+
+  &__navigation-arrow-right {
+  }
+
+  &__slider {
+  }
+
+  &__item {
+    min-height: 49.4rem;
+    padding: 2rem 2rem 3rem 2rem;
+    border-radius: 4rem;
+    background-color: $white;
+  }
+
+  &__image-block {
+    position: relative;
+    width: 100%;
+    height: 25.9rem;
+    margin-bottom: 3.5rem;
+    border-radius: 3.2rem;
+    overflow: hidden;
+    box-shadow: 1rem 1rem 4rem 0 rgba(219, 230, 237, 0.74);
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 9.3rem;
+    height: 9.3rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+
+  &__item-description {
+    padding: 0 0.5rem;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+  }
+
+  &__item-title {
+    padding: 0 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+    height: 3.2rem;
+  }
+
+  &__item-rating {
+    padding: 0 0.5rem;
+
+    > svg {
+      width: 2.4rem;
+      height: 2.2rem;
+
+      path {
+        fill: #E2ECF2;
+      }
+
+      &.orange {
+        path {
+          fill: $orange;
+        }
+      }
+
+      &.green {
+        path {
+          fill: $green;
+        }
+      }
+    }
+  }
+
+  &__item-rating-text {
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+    line-height: 3.2rem;
+    color: #97A5AE;
+  }
+}
