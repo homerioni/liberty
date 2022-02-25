@@ -2319,3 +2319,159 @@ body {
   line-height: 3.2rem;
   color: #97A5AE;
 }
+
+.text-reviews {
+  margin-bottom: 17rem;
+}
+.text-reviews__title-block {
+  margin-bottom: 5.5rem;
+}
+.text-reviews__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.93rem;
+  text-decoration: underline;
+}
+.text-reviews__link > svg {
+  width: 0.9rem;
+  height: 1.6rem;
+  margin-left: 1.4rem;
+}
+.text-reviews__link > svg path {
+  stroke: #171923;
+}
+.text-reviews__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.text-reviews__item {
+  width: 36.4rem;
+  height: 52.8rem;
+  padding: 3.4rem 3rem 3rem 2.7rem;
+  border-radius: 4rem;
+  background-color: #fff;
+}
+.text-reviews__image-block {
+  position: relative;
+  width: 100%;
+  height: 25.9rem;
+  margin-bottom: 4.4rem;
+  border-radius: 3.2rem;
+  overflow: hidden;
+  -webkit-box-shadow: 1rem 1rem 4rem 0 rgba(219, 230, 237, 0.74);
+          box-shadow: 1rem 1rem 4rem 0 rgba(219, 230, 237, 0.74);
+}
+.text-reviews__image-block > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.text-reviews__text-block {
+  width: 100%;
+  height: 26.8rem;
+  margin-bottom: 3.5rem;
+}
+.text-reviews__text {
+  width: 100%;
+  height: 23rem;
+  margin-bottom: 1.9rem;
+  overflow: hidden;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+}
+.text-reviews__text-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.93rem;
+  text-decoration: underline;
+}
+.text-reviews__text-link > svg {
+  width: 0.9rem;
+  height: 1.6rem;
+  margin-left: 1rem;
+}
+.text-reviews__text-link > svg path {
+  stroke: #171923;
+}
+.text-reviews__item-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 8.1rem;
+  height: 8.1rem;
+}
+.text-reviews__item-btn > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.text-reviews__item-description {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+}
+.text-reviews__item-title {
+  margin-bottom: 2.8rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  height: 3.2rem;
+}
+.text-reviews__item-rating-svg {
+  width: 2.5rem;
+  height: 2.3rem;
+  margin-right: 0.9rem;
+}
+.text-reviews__item-rating-svg > img {
+  width: 100%;
+  height: 100%;
+}
+.text-reviews__item-rating-svg .orange,
+.text-reviews__item-rating-svg .green {
+  display: none;
+}
+.text-reviews__item-rating-svg.orange .empty {
+  display: none;
+}
+.text-reviews__item-rating-svg.orange .orange {
+  display: block;
+  -webkit-box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 132, 75, 0.3);
+          box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 132, 75, 0.3);
+}
+.text-reviews__item-rating-svg.green .empty {
+  display: none;
+}
+.text-reviews__item-rating-svg.green .green {
+  display: block;
+  -webkit-box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(233, 240, 245, 0.3);
+          box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(233, 240, 245, 0.3);
+}
+.text-reviews__item-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0.5rem;
+  margin-bottom: 0.8rem;
+}
+.text-reviews__item-rating-text {
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+  line-height: 3.2rem;
+  color: #97A5AE;
+}
