@@ -85,3 +85,70 @@
     line-height: 2.5rem;
   }
 }
+
+@media (max-width: 48em) {
+  .advantages {
+    margin-bottom: 20rem;
+
+    &__title-block {
+      margin-bottom: 10rem;
+    }
+
+    &__title {}
+
+    &__btn {
+      margin: 0 auto;
+
+      &.mobile {
+        display: flex;
+      }
+    }
+
+    &__cards {
+      margin-bottom: 8rem;
+    }
+
+    &__item {
+      width: 100%;
+      min-height: 61.2rem;
+      padding: 6rem 4rem;
+      margin-bottom: 6rem;
+      border-radius: 8rem;
+      box-shadow: 4rem 4rem 18rem 0 rgba(219, 230, 237, 0.74);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__icon-block {}
+
+    &__icon {
+      width: 11rem;
+      height: 11rem;
+    }
+
+    &__number {
+      font-size: 4rem;
+      line-height: 4.84rem;
+    }
+
+    &__info-block {}
+
+    &__info-title {
+      font-size: 4rem;
+      line-height: 6rem;
+    }
+
+    &__line {
+      width: 43rem;
+      border-radius: 6rem;
+      margin: 4rem 0;
+    }
+
+    &__info-description {
+      font-size: 3.2rem;
+      line-height: 5rem;
+    }
+  }
+}
