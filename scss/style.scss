@@ -15,3 +15,25 @@
 @import "index/placement";
 @import "index/video-reviews";
 @import "index/text-reviews";
+
+body.lock {
+  overflow: hidden;
+}
+
+.mobile {
+  display: none;
+}
+
+.show {
+  display: initial;
+}
+
+@media (max-width: 48em) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: initial;
+  }
+}

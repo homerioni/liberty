@@ -15,4 +15,10 @@ $(document).ready(function () {
             $(this).parent().find('.review-rating__text').text('Положительный отзыв');
         }
     });
+
+    // Footer в мобильной версии
+    $('.footer__item--title').click(function () {
+        $(this).parent().toggleClass('open');
+        $('body').css('padding-bottom', $('.footer').height() / 5 + 20 + 'rem');
+    });
 });

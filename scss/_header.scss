@@ -98,3 +98,61 @@
     }
   }
 }
+
+@media (max-width: 48em) {
+  .header {
+    &__covid-info {
+      height: 14.4rem;
+      font-size: 3rem;
+      line-height: 3.6rem;
+      text-align: center;
+    }
+
+    &__burger-icon {
+      width: 4.2rem;
+      height: 3.8rem;
+      cursor: pointer;
+
+      path {
+        fill: #171923;
+      }
+    }
+
+    &__main {
+      height: 17.4rem;
+    }
+
+    &__container {}
+
+    &__logo {
+      display: block;
+      width: 46.8rem;
+      height: 9.6rem;
+      margin-right: 0;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__menu-item {}
+
+    &__contacts {}
+
+    &__contacts-info {}
+
+    &__contacts-phone {}
+
+    &__contacts-text {}
+
+    &__phone-icon {
+      width: 8rem;
+      height: 8rem;
+
+      > img {
+        width: 3.14rem;
+        height: 3.14rem;
+      }
+    }
+  }
+}

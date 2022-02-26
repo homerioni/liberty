@@ -10,4 +10,9 @@ $green: #318F89;
   font-weight: bold;
   font-size: 4.5rem;
   line-height: 6.5rem;
+
+  @media (max-width: 48em) {
+    font-size: 6rem;
+    line-height: 13rem;
+  }
 }

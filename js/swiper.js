@@ -57,8 +57,28 @@ const stages_slider = new Swiper('.stages__slider', {
     direction: 'horizontal',
     slidesPerView: 4.42,
     speed: 400,
-    spaceBetween: 45,
     allowTouchMove: false,
+
+    breakpoints: {
+        3000: {
+            spaceBetween: 70,
+        },
+        1920: {
+            spaceBetween: 45,
+        },
+        1600: {
+            spaceBetween: 37.5,
+        },
+        1300: {
+            spaceBetween: 32,
+        },
+        1024: {
+            spaceBetween: 25,
+        },
+        769: {
+            spaceBetween: 20
+        }
+    },
 
     navigation: {
         nextEl: '.stages__navigation-arrow-right',
@@ -110,7 +130,7 @@ const stages_slider = new Swiper('.stages__slider', {
                 items[index].classList.add('last');
                 $('.stages__slider').removeClass('last');
             } else {
-                $('.stages__wrapper').css('transform', 'translateX(' + (slider.previousTranslate - 407) + 'px)');
+                $('.stages__wrapper').css('transform', 'translateX(' + (-40.7 * stages_slider.activeIndex) + 'rem)');
                 items.removeClass('last');
             }
             $('.stages__navigation-time-block').removeClass('animate');
@@ -122,6 +142,8 @@ const stages_slider = new Swiper('.stages__slider', {
         },
     }
 });
+
+console.log(stages_slider);
 
 const placement_slider_green = new Swiper('.placement__image-slider--green', {
     direction: 'horizontal',
@@ -179,7 +201,27 @@ const video_reviews_slider = new Swiper('.video-reviews__slider', {
     slidesPerView: 4,
     loop: true,
     speed: 400,
-    spaceBetween: 45,
+
+    breakpoints: {
+        3000: {
+            spaceBetween: 70,
+        },
+        1920: {
+            spaceBetween: 45,
+        },
+        1600: {
+            spaceBetween: 37.5,
+        },
+        1300: {
+            spaceBetween: 32,
+        },
+        1024: {
+            spaceBetween: 25,
+        },
+        769: {
+            spaceBetween: 20
+        }
+    },
 
     navigation: {
         nextEl: '.video-reviews__navigation-arrow-right',
