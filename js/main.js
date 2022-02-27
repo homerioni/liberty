@@ -1,6 +1,9 @@
 'use strict';
 
 $(document).ready(function () {
+    // Отступ для прижима футера
+    $('body').css('padding-bottom', $('.footer').outerHeight());
+
     // Настройка оценок для отзывов
     $('.review-rating').each(function () {
         let rating = $(this).attr('rating');
@@ -19,7 +22,7 @@ $(document).ready(function () {
     // Footer в мобильной версии
     $('.footer__item--title').click(function () {
         $(this).parent().toggleClass('open');
-        $('body').css('padding-bottom', $('.footer').height() / 5 + 20 + 'rem');
+        $('body').css('padding-bottom', $('.footer').outerHeight());
     });
 });
 
