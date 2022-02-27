@@ -22,3 +22,42 @@ $(document).ready(function () {
         $('body').css('padding-bottom', $('.footer').height() / 5 + 20 + 'rem');
     });
 });
+
+let map_icon;
+if ($(document).width() > 768) {
+    map_icon = 'img/map-icon.svg';
+} else {
+    map_icon = 'img/map-icon-mob.svg';
+}
+
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.683260, 37.519431],
+            zoom: 15
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            balloonContent: 'Наркологическая клиника Liberty'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: map_icon,
+            // Размеры метки.
+            iconImageSize: [508, 162],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-508, -162]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark);
+});
