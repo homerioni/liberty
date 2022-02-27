@@ -137,7 +137,6 @@
 
       .orange {
         display: block;
-        box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 132, 75, 0.3);
       }
     }
 
@@ -148,7 +147,6 @@
 
       .green {
         display: block;
-        box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(233, 240, 245, 0.3);
       }
     }
   }
@@ -164,5 +162,110 @@
     font-size: 1.5rem;
     line-height: 3.2rem;
     color: #97A5AE;
+  }
+}
+
+@media (max-width: 48em) {
+  .text-reviews {
+    margin-bottom: 20rem;
+
+    &__title-block {
+      margin-bottom: 8rem;
+    }
+
+    &__link {
+      justify-content: center;
+      font-size: 3.2rem;
+      line-height: 3.86rem;
+
+      > svg {
+        width: 1.8rem;
+        height: 3.2rem;
+        margin-left: 2.8rem;
+      }
+
+      &.mobile {
+        display: flex;
+      }
+    }
+
+    &__cards {
+      flex-direction: column;
+      justify-content: normal;
+    }
+
+    &__item {
+      width: 100%;
+      height: 100.2rem;
+      margin-bottom: 6rem;
+      padding: 6rem 4rem;
+      border-radius: 8rem;
+    }
+
+    &__image-block {
+      height: 47.4rem;
+      margin-bottom: 10rem;
+      border-radius: 6.4rem;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__text-block {
+      height: 49.4rem;
+      margin-bottom: 8rem;
+    }
+
+    &__text {
+      height: 41.4rem;
+      margin-bottom: 4rem;
+      font-size: 3.2rem;
+      line-height: 4.6rem;
+    }
+
+    &__text-link {
+      font-size: 3.2rem;
+      line-height: 3.86rem;
+
+      > svg {
+        width: 1.8rem;
+        height: 3.2rem;
+        margin-left: 2rem;
+      }
+    }
+
+    &__item-btn {
+      right: 0.8rem;
+      top: 1.8rem;
+      width: 16.2rem;
+      height: 16.2rem;
+    }
+
+    &__item-description {
+      font-size: 3.2rem;
+      line-height: 6.4rem;
+    }
+
+    &__item-title {
+      margin-bottom: 2.8rem;
+      font-weight: bold;
+      font-size: 5rem;
+      height: 6.4rem;
+    }
+
+    &__item-rating-svg {
+      width: 5rem;
+      height: 4.6rem;
+      margin-right: 1.8rem;
+    }
+
+    &__item-rating-text {
+      padding: 0 1rem;
+      font-size: 3rem;
+      line-height: 6.4rem;
+    }
   }
 }

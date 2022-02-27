@@ -186,3 +186,116 @@
     }
   }
 }
+
+@media (max-width: 48em) {
+  .placement {
+    margin-bottom: 20rem;
+
+    &__title-block {
+      margin-bottom: 8rem;
+    }
+
+    &__cards {
+      flex-direction: column;
+      justify-content: normal;
+    }
+
+    &__item {
+      width: 100%;
+      min-height: 100rem;
+      padding: 4rem 4rem 10rem 4rem;
+      margin-bottom: 10rem;
+      border-radius: 8rem;
+      box-shadow: 4rem 4rem 18rem 0 rgba(219, 230, 237, 0.74);
+
+      &:last-child {
+        margin-bottom: 12rem;
+      }
+    }
+
+    &__image-slider-block {
+      margin-bottom: 6rem;
+
+      .placement__image-pagination {
+        bottom: 4rem;
+      }
+
+      .swiper-pagination-bullet {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0 1.2rem !important;
+        opacity: 0.6;
+      }
+    }
+
+    &__image-slider {
+      height: 39.4rem;
+      border-radius: 6.4rem;
+      box-shadow: 1rem 1rem 4rem 0 rgba(219, 230, 237, 0.74);
+    }
+
+    &__image-block {}
+
+    &__title {
+      padding: 0 2rem;
+      margin-bottom: 1.6rem;
+      font-size: 4.6rem;
+      line-height: 6.4rem;
+    }
+
+    &__sub-title {
+      padding: 0 2rem;
+      margin-bottom: 5rem;
+      font-size: 3.2rem;
+      line-height: 5rem;
+    }
+
+    &__list {
+      padding: 0 2rem;
+      font-size: 3.2rem;
+      line-height: 5rem;
+    }
+
+    &__list-item {
+      margin-bottom: 1.8rem;
+      margin-left: 3.6rem;
+
+      &::marker {
+        font-size: 4rem;
+      }
+    }
+
+    &__price {
+      bottom: -4.4rem;
+      right: 3.6rem;
+      width: 37.6rem;
+      height: 10.8rem;
+      border-radius: 8rem;
+
+      &--money {
+        font-size: 4.6rem;
+        line-height: 5.56rem;
+
+        &:before {
+          margin-top: -1rem;
+          margin-left: 0.8rem;
+          font-size: 3rem;
+          line-height: 3.62rem;
+        }
+
+        &:after {
+          font-size: 3rem;
+          line-height: 3.62rem;
+        }
+      }
+    }
+
+    &__btn {
+      margin: 0 auto;
+
+      &.mobile {
+        display: flex;
+      }
+    }
+  }
+}

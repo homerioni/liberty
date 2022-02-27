@@ -97,7 +97,6 @@
 
       .orange {
         display: block;
-        box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 132, 75, 0.3);
       }
     }
 
@@ -108,7 +107,6 @@
 
       .green {
         display: block;
-        box-shadow: 1px 1px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(233, 240, 245, 0.3);
       }
     }
   }
@@ -124,5 +122,91 @@
     font-size: 1.5rem;
     line-height: 3.2rem;
     color: #97A5AE;
+  }
+}
+
+@media (max-width: 48em) {
+  .video-reviews {
+    margin-bottom: 20rem;
+
+    &__title-block {
+      margin-bottom: 6rem;
+    }
+
+    &__navigation-block {
+      justify-content: space-between;
+      align-items: center;
+
+      &.mobile {
+        display: flex;
+      }
+
+      .navigation-block__pagination {
+        font-size: 4rem;
+        line-height: 4.6rem;
+
+        > .swiper-pagination-current {
+          font-size: 6rem;
+          line-height: 7.2rem;
+        }
+      }
+    }
+
+    &__navigation-time-body {}
+
+    &__pagination {
+      &--mobile {}
+    }
+
+    &__slider {}
+
+    &__item {
+      min-height: 93.2rem;
+      padding: 4rem 4rem 6rem 4rem;
+      margin-bottom: 6rem;
+      border-radius: 8rem;
+    }
+
+    &__image-block {
+      height: 47.4rem;
+      margin-bottom: 6rem;
+      border-radius: 6.4rem;
+    }
+
+    &__item-btn {
+      width: 18.6rem;
+      height: 18.6rem;
+    }
+
+    &__item-description {
+      padding: 0 1rem;
+      font-size: 3.2rem;
+      line-height: 6.4rem;
+    }
+
+    &__item-title {
+      padding: 0 1rem;
+      margin-bottom: 4rem;
+      font-size: 5rem;
+      height: 6.4rem;
+    }
+
+    &__item-rating-svg {
+      width: 5rem;
+      height: 4.6rem;
+      margin-right: 1.8rem;
+    }
+
+    &__item-rating {
+      display: flex;
+      padding: 0 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    &__item-rating-text {
+      padding: 0 1rem;
+      font-size: 3rem;
+      line-height: 6.4rem;
+    }
   }
 }
