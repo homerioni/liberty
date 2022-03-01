@@ -31,6 +31,16 @@ $(document).ready(function () {
         $('.header__menu').removeClass('open');
         $('body').removeClass('lock');
     });
+
+    // Секция list-services
+    $('.list-services__title-block').click(function () {
+        $(this).find('.list-services__title-block-btn-icon-block').toggleClass('open');
+        $(this).parent().find('.list-services__content-block').slideToggle()
+    });
+    $('.list-services__item-icon').click(function () {
+        $(this).toggleClass('open');
+        $(this).parent().parent().find('.list-services__list').slideToggle();
+    });
 });
 
 let map_icon;
