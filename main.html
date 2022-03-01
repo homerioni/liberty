@@ -20,15 +20,20 @@
         </div>
         <div class="header__main">
             <div class="container header__container">
-                <div class="header__burger-icon mobile">
+                <button class="header__burger-icon mobile">
                     <svg viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.05C0 0.470101 0.470101 0 1.05 0H19.95C20.5299 0 21 0.470101 21 1.05C21 1.6299 20.5299 2.1 19.95 2.1H1.05C0.4701 2.1 0 1.6299 0 1.05ZM0 17.8498C0 17.2699 0.470101 16.7998 1.05 16.7998H19.95C20.5299 16.7998 21 17.2699 21 17.8498C21 18.4297 20.5299 18.8998 19.95 18.8998H1.05C0.4701 18.8998 0 18.4297 0 17.8498ZM1.05 8.40039C0.470101 8.40039 0 8.87049 0 9.45039C0 10.0303 0.4701 10.5004 1.05 10.5004H19.95C20.5299 10.5004 21 10.0303 21 9.45039C21 8.87049 20.5299 8.40039 19.95 8.40039H1.05Z" />
                     </svg>
-                </div>
+                </button>
                 <a class="header__logo">
                     <img src="img/logo.svg" alt="">
                 </a>
                 <ul class="header__menu">
+                    <button class="header__menu-close mobile">
+                        <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.1471 0.646447L1.14707 20.6464L1.85418 21.3536L21.8542 1.35355L21.1471 0.646447ZM0.646447 1.35355L20.6464 21.3536L21.3536 20.6464L1.35355 0.646447L0.646447 1.35355Z" />
+                        </svg>
+                    </button>
                     <li class="header__menu-item">
                         <a href="#">Наркомания</a>
                     </li>
@@ -1719,6 +1724,7 @@
             <div class="container">
                 <div id="map"></div>
             </div>
+            <script src="https://api-maps.yandex.ru/2.1/?apikey=c9e39c09-0f62-4828-b0ce-7ca99a606b15&lang=ru_RU" type="text/javascript"></script>
         </section>
     </main>
 
@@ -1898,7 +1904,6 @@
 
 
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=c9e39c09-0f62-4828-b0ce-7ca99a606b15&lang=ru_RU" type="text/javascript"></script>
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/swiper.js"></script>

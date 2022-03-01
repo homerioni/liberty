@@ -30,6 +30,10 @@ body.lock {
   display: initial;
 }
 
+.hide {
+  display: none;
+}
+
 @media (max-width: 48em) {
   .desktop {
     display: none;

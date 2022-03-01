@@ -1,9 +1,6 @@
 'use strict';
 
 $(document).ready(function () {
-    // Отступ для прижима футера
-    $('body').css('padding-bottom', $('.footer').outerHeight());
-
     // Настройка оценок для отзывов
     $('.review-rating').each(function () {
         let rating = $(this).attr('rating');
@@ -23,6 +20,16 @@ $(document).ready(function () {
     $('.footer__item--title').click(function () {
         $(this).parent().toggleClass('open');
         $('body').css('padding-bottom', $('.footer').outerHeight());
+    });
+
+    // Бургер меню
+    $('.header__burger-icon').click(function () {
+        $('.header__menu').addClass('open');
+        $('body').addClass('lock');
+    });
+    $('.header__menu-close').click(function () {
+        $('.header__menu').removeClass('open');
+        $('body').removeClass('lock');
     });
 });
 
@@ -61,6 +68,5 @@ ymaps.ready(function () {
             iconImageOffset: [-508, -162]
         });
 
-    myMap.geoObjects
-        .add(myPlacemark);
+    myMap.geoObjects.add(myPlacemark);
 });
