@@ -87,6 +87,15 @@
       }
     }
 
+    &--daily {
+      font-weight: bold;
+      font-size: 2rem;
+
+      &:after {
+        content: ' руб./сутки';
+      }
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -97,7 +106,8 @@
         line-height: 2.42rem;
       }
 
-      .prices__item--money {
+      .prices__item--money,
+      .prices__item--daily {
         color: #328F8A;
       }
 
@@ -423,6 +433,11 @@
           font-size: 3.6rem;
           line-height: 4.35rem;
         }
+      }
+
+      &--daily {
+        font-size: 3.6rem;
+        line-height: 4.35rem;
       }
 
       &:hover {
