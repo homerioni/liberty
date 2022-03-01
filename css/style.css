@@ -4199,6 +4199,154 @@ body {
     height: 26.4rem !important;
   }
 }
+.citation {
+  margin-bottom: 16rem;
+}
+.citation__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  min-height: 32.3rem;
+  border-radius: 3rem;
+  background-color: #fff;
+}
+.citation__info-block {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 47.9rem;
+  padding: 5.6rem 10rem 5.6rem 3.9rem;
+  border-radius: 3rem 0 0 3rem;
+  background: linear-gradient(147.03deg, #2F8D88 19.67%, #6DB197 74.14%);
+  color: #fff;
+}
+.citation__special {
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.23rem;
+}
+.citation__special--min {
+  font-weight: normal;
+  line-height: 2.16rem;
+}
+.citation__name {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 3.1rem;
+}
+.citation__experience {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.48rem;
+}
+.citation__image-block {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 33.9rem;
+  height: 33.9rem;
+  margin-left: -8.9rem;
+  margin-top: -2.6rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.citation__image-block > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.citation__text-block {
+  position: relative;
+  margin: 4.2rem 8.3rem 3.2rem 6.3rem;
+  padding: 2rem 5.4rem 1.3rem 9.5rem;
+  border-radius: 4rem;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.46)), linear-gradient(269.75deg, #7CCEBB 1.79%, #55B39A 98.53%);
+  -webkit-box-shadow: 2px 2px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 255, 255, 0.1);
+          box-shadow: 2px 2px 0.53rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.88rem 2.63rem 0 rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.39rem;
+  color: #1A6958;
+}
+.citation__text-block-icon {
+  position: absolute;
+  top: 0;
+  left: -4.2rem;
+  width: 11.5rem;
+  height: 11.5rem;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 1.12rem 3.36rem 0 #e9f0f5;
+          box-shadow: 0 1.12rem 3.36rem 0 #e9f0f5;
+}
+.citation__text-block-icon > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 48em) {
+  .citation {
+    margin-bottom: 20rem;
+  }
+  .citation__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 90rem;
+    border-radius: 8rem;
+  }
+  .citation__info-block {
+    width: 100%;
+    padding: 8rem 4rem 18rem 4rem;
+    border-radius: 4rem 4rem 0 0;
+  }
+  .citation__special {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    line-height: 3.63rem;
+  }
+  .citation__special--min {
+    font-size: 3.6rem;
+    line-height: 4.18rem;
+  }
+  .citation__name {
+    margin-bottom: 3.4rem;
+    font-size: 4rem;
+    line-height: 4.84rem;
+  }
+  .citation__experience {
+    font-size: 3.6rem;
+    line-height: 4.35rem;
+  }
+  .citation__image-block {
+    width: 58.8rem;
+    height: 58.8rem;
+    margin: -16.3rem auto 5.57rem auto;
+  }
+  .citation__text-block {
+    margin: 0 4.2rem 8rem 6rem;
+    padding: 4rem 3.8rem 4.2rem 14.6rem;
+    border-radius: 8rem;
+    -webkit-box-shadow: 2px 2px 1rem 0 rgba(255, 255, 255, 0.6) inset, 0 1.8rem 5rem 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 2px 2px 1rem 0 rgba(255, 255, 255, 0.6) inset, 0 1.8rem 5rem 0 rgba(255, 255, 255, 0.1);
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
+  .citation__text-block-icon {
+    top: -3rem;
+    left: -2rem;
+    width: 14rem;
+    height: 14rem;
+    -webkit-box-shadow: 0 2.2rem 6.7rem 0 #e9f0f5;
+            box-shadow: 0 2.2rem 6.7rem 0 #e9f0f5;
+  }
+}
 body.lock {
   overflow: hidden;
 }
