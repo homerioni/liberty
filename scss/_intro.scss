@@ -218,6 +218,12 @@
     font-size: 1.6rem;
     line-height: 1.98rem;
   }
+
+  &--blog {
+    .intro__item {
+      border-bottom: 3px solid #E2ECF2;
+    }
+  }
 }
 
 @media (max-width: 48em) {
@@ -444,6 +450,13 @@
         &__link {
           color: #171923;
         }
+      }
+    }
+
+    &--blog {
+      .intro__item {
+        border-bottom: none;
+        overflow: hidden;
       }
     }
   }
