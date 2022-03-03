@@ -1,0 +1,69 @@
+@import "../param";
+
+.citation-article {
+  margin-bottom: 16rem;
+
+  &__block {
+    display: flex;
+    width: 117.2rem;
+    min-height: 12.7rem;
+    border-radius: 3rem;
+    background-color: $white;
+  }
+
+  &__info-block {
+    flex: none;
+    width: 41rem;
+    padding: 2.6rem 14rem 2.4rem 3.9rem;
+    border-radius: 3rem 0 0 3rem;
+    background: linear-gradient(147.03deg, #2F8D88 19.67%, #6DB197 74.14%);
+    color: $white;
+  }
+
+  &__special {
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.23rem;
+
+    &--min {
+      font-weight: normal;
+      line-height: 2.16rem;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3.1rem;
+  }
+
+  &__experience {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.48rem;
+  }
+
+  &__image-block {
+    flex: none;
+    width: 19.8rem;
+    height: 19.8rem;
+    margin: -3.5rem 0 -3.6rem -13rem;
+    border-radius: 100%;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    align-items: center;
+    padding: 2rem 5rem;
+    font-size: 1.8rem;
+    line-height: 2.09rem;
+  }
+}

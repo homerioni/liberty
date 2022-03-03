@@ -1,0 +1,64 @@
+@import "../param";
+
+.comments-form {
+  margin-bottom: 16rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    display: block;
+    width: 118.4rem;
+    padding: 6rem;
+    border-radius: 4rem;
+    background-color: $white;
+    box-shadow: 2rem 4rem 12rem 0 #DBE6EDBD;
+  }
+
+  &__title {
+    margin-bottom: 5rem;
+    font-weight: bold;
+    font-size: 3.3rem;
+    line-height: 4.3rem;
+  }
+
+  &__label {
+  }
+
+  &__input-name {
+    margin-bottom: 3rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.18rem;
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 2.5rem;
+    box-shadow: 1px 1px 0.53rem 0 #FFFFFF99 inset, 0 0.88rem 2.63rem 0 #FF844B4D, 1px 1px 0.53rem 0 #FFFFFF99 inset;
+
+    &--name {
+      height: 6.8rem;
+      margin-bottom: 4rem;
+    }
+
+    &--comment {
+      height: 15.6rem;
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__btn {
+    width: 28.8rem;
+  }
+
+  &__after-item {
+    width: 36.4rem;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 48em) {
+}

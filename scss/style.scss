@@ -27,6 +27,10 @@
 @import "blog/blog-category";
 @import "blog/articles";
 
+@import "article/article";
+@import "article/citation-article";
+@import "article/comments_form";
+
 body.lock {
   overflow: hidden;
 }
