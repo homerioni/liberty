@@ -41,6 +41,41 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $(this).parent().parent().find('.list-services__list').slideToggle();
     });
+
+    // Секция doctors описание
+    $('.doctors__item-arrow').click(function () {
+        let desc_block = $(this).parent().find('.doctors__description-block'),
+            item = $(this).parent(),
+            open = function () {
+            if ($(document).width() > 768) {
+                item.css('margin-bottom', 'calc(' + desc_block.outerHeight() + 'px + 9rem)');
+            } else {
+                item.css('margin-bottom', 'calc(' + desc_block.outerHeight() + 'px + 25rem)');
+            }
+                desc_block.addClass('show');
+                item.addClass('open');
+            };
+
+        if (item.hasClass('open')) {
+            $('.doctors__item').removeAttr('style').removeClass('open');
+            $('.doctors__description-block').removeClass('show');
+        } else {
+            $('.doctors__item').removeAttr('style').removeClass('open');
+            $('.doctors__description-block').removeClass('show');
+            setTimeout(open, 300);
+        }
+    });
+
+    // Секция min-cleansing, ховер для вопроса
+    $('.min-cleansing__question').hover(function () {
+        $(this).parent().find('.min-cleansing__question-hover-block').fadeToggle(250);
+    });
+
+    // Секция recovery-procedure раскрытие текстового блока в мобилке
+    $('.recovery-procedure__text-block-btn').click(function () {
+        $('.recovery-procedure__text-block').addClass('open');
+        $(this).css('display', 'none');
+    });
 });
 
 let map_icon;
