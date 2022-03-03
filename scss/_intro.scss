@@ -224,6 +224,14 @@
       border-bottom: 3px solid #E2ECF2;
     }
   }
+
+  &--article {
+    margin-bottom: 5rem;
+
+    .intro__item {
+      border-bottom: 3px solid #E2ECF2;
+    }
+  }
 }
 
 @media (max-width: 48em) {
@@ -454,6 +462,15 @@
     }
 
     &--blog {
+      .intro__item {
+        border-bottom: none;
+        overflow: hidden;
+      }
+    }
+
+    &--article {
+      margin-bottom: 10rem;
+
       .intro__item {
         border-bottom: none;
         overflow: hidden;

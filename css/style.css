@@ -1128,6 +1128,12 @@ body {
 .intro--blog .intro__item {
   border-bottom: 3px solid #E2ECF2;
 }
+.intro--article {
+  margin-bottom: 5rem;
+}
+.intro--article .intro__item {
+  border-bottom: 3px solid #E2ECF2;
+}
 
 @media (max-width: 48em) {
   .intro {
@@ -1326,6 +1332,13 @@ body {
     color: #171923;
   }
   .intro--blog .intro__item {
+    border-bottom: none;
+    overflow: hidden;
+  }
+  .intro--article {
+    margin-bottom: 10rem;
+  }
+  .intro--article .intro__item {
     border-bottom: none;
     overflow: hidden;
   }
@@ -6185,6 +6198,24 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.pages {
+  margin-bottom: 8rem;
+}
+.pages__parent {
+  margin-right: 3rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+  text-decoration: underline;
+  color: #97A6AE;
+}
+.pages__this {
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 3.2rem;
+  text-decoration: underline;
 }
 
 body.lock {

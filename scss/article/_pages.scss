@@ -1,0 +1,19 @@
+.pages {
+  margin-bottom: 8rem;
+
+  &__parent {
+    margin-right: 3rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    text-decoration: underline;
+    color: #97A6AE;
+  }
+
+  &__this {
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    text-decoration: underline;
+  }
+}
