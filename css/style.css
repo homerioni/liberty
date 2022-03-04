@@ -4359,7 +4359,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  min-height: 32.3rem;
   border-radius: 3rem;
   background-color: #fff;
 }
@@ -4398,10 +4397,11 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  width: 33.9rem;
-  height: 33.9rem;
+  max-width: 33.9rem;
+  max-height: 33.9rem;
   margin-left: -8.9rem;
   margin-top: -2.6rem;
+  margin-bottom: -2.6rem;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -4411,8 +4411,15 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.citation__text-block {
+.citation__citation {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 11.5rem;
   margin: 4.2rem 8.3rem 3.2rem 6.3rem;
   padding: 2rem 5.4rem 1.3rem 9.5rem;
   border-radius: 4rem;
@@ -4439,6 +4446,11 @@ body {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.citation__text {
+  margin: 2.5rem 8.3rem 3.2rem 6.3rem;
+  font-size: 1.8rem;
+  line-height: 2.16rem;
 }
 
 @media (max-width: 48em) {
@@ -4477,12 +4489,12 @@ body {
     line-height: 4.35rem;
   }
   .citation__image-block {
-    width: 58.8rem;
-    height: 58.8rem;
+    max-width: 58.8rem;
+    max-height: 58.8rem;
     margin: -16.3rem auto 5.57rem auto;
   }
-  .citation__text-block {
-    margin: 0 4.2rem 8rem 6rem;
+  .citation__citation {
+    margin: 0 4.2rem 5rem 6rem;
     padding: 4rem 3.8rem 4.2rem 14.6rem;
     border-radius: 8rem;
     -webkit-box-shadow: 2px 2px 1rem 0 rgba(255, 255, 255, 0.6) inset, 0 1.8rem 5rem 0 rgba(255, 255, 255, 0.1);
@@ -4497,6 +4509,11 @@ body {
     height: 14rem;
     -webkit-box-shadow: 0 2.2rem 6.7rem 0 #e9f0f5;
             box-shadow: 0 2.2rem 6.7rem 0 #e9f0f5;
+  }
+  .citation__text {
+    margin: 5rem 4rem 8rem 4rem;
+    font-size: 3.2rem;
+    line-height: 3.7rem;
   }
 }
 .list-services {
