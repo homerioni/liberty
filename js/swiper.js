@@ -119,7 +119,6 @@ if ($(document).width() >= 768) {
                 if (item.length > 4) {
                     item[4].classList.add('last');
                 } else {
-                    stages_slider.disable();
                     $('.stages__navigation-block').css('display', 'none');
                 }
             },
