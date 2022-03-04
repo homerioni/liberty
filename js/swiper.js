@@ -115,7 +115,13 @@ if ($(document).width() >= 768) {
 
         on: {
             init: function () {
-                $('.stages__item')[4].classList.add('last');
+                let item = $('.stages__item')
+                if (item.length > 4) {
+                    item[4].classList.add('last');
+                } else {
+                    stages_slider.disable();
+                    $('.stages__navigation-block').css('display', 'none');
+                }
             },
             autoplayStop: function () {
                 $('.stages__navigation-time-block').removeClass('animate');
