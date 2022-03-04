@@ -125,7 +125,7 @@ if ($(document).width() >= 768) {
             autoplayStop: function () {
                 $('.stages__navigation-time-block').removeClass('animate');
             },
-            slideChange: function (slider) {
+            slideChange: function () {
                 if (stages_slider.activeIndex % 2 !== 0) {
                     $('.stages__bg-line').addClass('reverse');
                 } else {
@@ -226,7 +226,7 @@ const video_reviews_slider = new Swiper('.video-reviews__slider', {
             spaceBetween: 25,
         },
         769: {
-            spaceBetween: 20
+            spaceBetween: 20,
         },
         0: {
             slidesPerView: 1,
@@ -282,6 +282,98 @@ const video_reviews_slider = new Swiper('.video-reviews__slider', {
         transitionEnd: function (slider) {
             if (slider.autoplay.running) {
                 $('.video-reviews__navigation-time-block').addClass('animate');
+            }
+        },
+    }
+});
+
+const gallery_slider = new Swiper('.gallery__slider', {
+    direction: 'horizontal',
+    slidesPerView: 5.5,
+    speed: 400,
+    centeredSlides: true,
+    loop: true,
+    slideToClickedSlide: true,
+
+    breakpoints: {
+        3000: {
+            spaceBetween: 70,
+            allowTouchMove: false,
+        },
+        1920: {
+            spaceBetween: 45,
+            allowTouchMove: false,
+        },
+        1600: {
+            spaceBetween: 37.5,
+            allowTouchMove: false,
+        },
+        1300: {
+            spaceBetween: 32,
+            allowTouchMove: false,
+        },
+        1024: {
+            spaceBetween: 25,
+            allowTouchMove: false,
+        },
+        769: {
+            spaceBetween: 20,
+            allowTouchMove: false,
+        },
+        0: {
+            slidesPerView: 1,
+            pagination: {
+                el: '.gallery__pagination--mobile',
+            },
+        }
+    },
+
+    navigation: {
+        nextEl: '.gallery__navigation-arrow-right',
+        prevEl: '.gallery__navigation-arrow-left',
+    },
+
+    pagination: {
+        el: '.gallery__pagination',
+        type: 'fraction',
+        formatFractionCurrent: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+        formatFractionTotal: function (number) {
+            if (number < 10) {
+                return '0' + number;
+            } else {
+                return number;
+            }
+        },
+    },
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+
+    on: {
+        init: function () {
+            $('.gallery__navigation-time-block').addClass('animate');
+        },
+        autoplayStop: function () {
+            $('.gallery__navigation-time-block').removeClass('animate');
+        },
+        slideChange: function (slider) {
+            $('.gallery__navigation-time-block').removeClass('animate');
+            if ($(document).width() > 768) {
+                $('.gallery__wrapper').css('transform', 'translateX(' + ((-27.3 * slider.activeIndex) + 61.3) + 'rem)');
+            }
+
+        },
+        transitionEnd: function (slider) {
+            if (slider.autoplay.running) {
+                $('.gallery__navigation-time-block').addClass('animate');
             }
         },
     }
