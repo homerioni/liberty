@@ -1,0 +1,191 @@
+@import "../param";
+
+.page-price-block {
+  margin-bottom: 16rem;
+
+  &__tab {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 118.3rem;
+    min-height: 9rem;
+    padding: 1rem 4.7rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    background-color: #fff;
+
+    &.open {
+      .page-price-block__tab-btn {
+        > svg {
+          transform: rotate(0deg);
+        }
+
+        .open {
+          display: block;
+        }
+
+        .closed {
+          display: none;
+        }
+      }
+
+      .page-price-block__tab-svg-bg,
+      .page-price-block__prices-svg-bg {
+        transform: translate(0, 0);
+        visibility: visible;
+      }
+    }
+  }
+
+  &__tab-svg-bg {
+    position: absolute;
+    right: 14.1rem;
+    bottom: -1px;
+    z-index: 1;
+    width: 11.3rem;
+    height: 4.9rem;
+    transform: translate(0, 100%);
+    transition: 0.3s ease;
+    visibility: hidden;
+
+    path {
+      fill: rgb(240,245,249);
+    }
+  }
+
+  &__prices-svg-bg {
+    position: absolute;
+    bottom: -1.2rem;
+    right: 14.5rem;
+    z-index: 1;
+    width: 11.6rem;
+    height: 4.8rem;
+    transform: translate(0, 100%);
+    transition: 0.3s ease;
+    visibility: hidden;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &__tab-title {
+    width: 88rem;
+    @include title-font;
+  }
+
+  &__tab-btn {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.98rem;
+    text-decoration: underline;
+
+    > svg {
+      width: 0.9rem;
+      height: 1.6rem;
+      margin-left: 0.9rem;
+      transform: rotate(90deg);
+      transition: 0.4s ease;
+
+      path {
+        stroke: #171923;
+      }
+    }
+
+    .open {
+      display: none;
+    }
+  }
+
+  &__prices {
+    position: relative;
+    z-index: 2;
+    box-shadow: none;
+  }
+
+  &__prices-main-block {
+    box-shadow: none;
+
+    .prices__main-title {
+      font-size: 3.3rem;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .page-price-block {
+    margin-bottom: 20rem;
+
+    &__tab {
+      width: 100%;
+      min-height: 19rem;
+      padding: 4rem;
+      margin-bottom: 2rem;
+      border-radius: 4rem;
+
+      &.open {
+        .page-price-block__tab-btn {
+          > svg {
+            transform: rotate(-90deg);
+          }
+
+          .open {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__tab-svg-bg {
+      right: 8rem;
+      bottom: -1px;
+      width: 15rem;
+      height: 6.5rem;
+    }
+
+    &__prices-svg-bg {
+      bottom: -2.2rem;
+      right: 8.6rem;
+      width: 15.4rem;
+      height: 6.4rem;
+    }
+
+    &__tab-title {
+      width: 48.4rem;
+      @include title-font;
+    }
+
+    &__tab-btn {
+
+      > svg {
+        width: 1.8rem;
+        height: 3.2rem;
+        margin-left: 0;
+      }
+
+      .open,
+      .closed {
+        display: none;
+      }
+    }
+
+    &__prices {
+      box-shadow: none;
+
+      .container {
+        padding: 0;
+      }
+    }
+
+    &__prices-main-block {
+      box-shadow: none;
+
+      .prices__main-title {
+        font-size: 6rem;
+      }
+    }
+  }
+}

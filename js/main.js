@@ -76,6 +76,15 @@ $(document).ready(function () {
         $('.recovery-procedure__text-block').addClass('open');
         $(this).css('display', 'none');
     });
+
+    // Страница prices.html настройка табов
+    $('.page-price-block__tab').click(function () {
+        let tab = $(this);
+        setTimeout(function () {
+            tab.toggleClass('open');
+        }, 100)
+        tab.parent().find('.prices').slideToggle(500);
+    });
 });
 
 let map_icon;

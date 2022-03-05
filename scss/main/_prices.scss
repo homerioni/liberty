@@ -153,7 +153,7 @@
   }
 
   &__main-image-block {
-    width: 38rem;
+    max-width: 38rem;
     height: auto;
     margin: -6.6rem -4.2rem 0 -4.2rem;
 
@@ -162,8 +162,7 @@
       height: 100%;
       min-height: 28rem;
       max-height: 34rem;
-      object-fit: contain;
-      object-position: bottom;
+      object-fit: scale-down;
     }
   }
 
@@ -385,7 +384,7 @@
     }
 
     &__main-link {
-      margin: 0 auto 23rem auto;
+      margin: 0 auto;
       font-size: 3.2rem;
       line-height: 3.86rem;
 
@@ -462,12 +461,14 @@
     &__main-info-block {
       width: 100%;
       padding: 0 3.8rem 9.2rem 3.8rem;
+      margin-top: 12rem;
       border-radius: 6rem;
     }
 
     &__main-image-block {
-      width: 67rem;
-      margin: -11rem -7.8rem 3rem -7.8rem;
+      width: auto;
+      max-width: 120%;
+      margin: -11rem -5rem 2rem -5rem;
 
       > img {
         min-height: 45rem;

@@ -67,3 +67,58 @@
     line-height: 2.09rem;
   }
 }
+
+@media (max-width: 48em) {
+  .citation-article {
+    margin-bottom: 20rem;
+
+    &__block {
+      flex-direction: column;
+      width: 100%;
+      min-height: 90rem;
+      border-radius: 8rem;
+    }
+
+    &__info-block {
+      width: 100%;
+      padding: 8rem 4rem 18rem 4rem;
+      border-radius: 8rem 8rem 0 0;
+    }
+
+    &__special {
+      margin-bottom: 1rem;
+      font-size: 3rem;
+      line-height: 3.63rem;
+
+      &--min {
+        font-size: 3.6rem;
+        line-height: 4.18rem;
+      }
+    }
+
+    &__name {
+      font-size: 4rem;
+      line-height: 4.84rem;
+    }
+
+    &__experience {
+      font-size: 3.6rem;
+      line-height: 4.35rem;
+    }
+
+    &__image-block {
+      width: auto;
+      height: auto;
+      max-width: 58.8rem;
+      max-height: 58.8rem;
+      margin: -16.3rem auto 5.57rem auto;
+    }
+
+    &__text-block {
+      padding: 0;
+      margin: 5rem 4rem 8rem 4rem;
+      font-size: 3.2rem;
+      line-height: 3.7rem;
+    }
+  }
+}

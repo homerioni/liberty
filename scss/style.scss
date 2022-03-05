@@ -5,18 +5,18 @@
 @import "footer";
 @import "intro";
 
-@import "index/services-cards";
-@import "index/prices";
-@import "index/advantages";
-@import "index/about-numbers";
-@import "index/doctors";
-@import "index/motivation";
-@import "index/stages";
-@import "index/placement";
-@import "index/video-reviews";
-@import "index/text-reviews";
-@import "index/licenses";
-@import "index/map";
+@import "main/services-cards";
+@import "main/prices";
+@import "main/advantages";
+@import "main/about-numbers";
+@import "main/doctors";
+@import "main/motivation";
+@import "main/stages";
+@import "main/placement";
+@import "main/video-reviews";
+@import "main/text-reviews";
+@import "main/licenses";
+@import "main/map";
 
 @import "treatment-programs/citation";
 @import "treatment-programs/list-services";
@@ -35,6 +35,9 @@
 @import "gameromania/program-gamer";
 
 @import "drug-hospital/gallery";
+
+@import "prices/page-price-block";
+@import "prices/callback";
 
 body.lock {
   overflow: hidden;
