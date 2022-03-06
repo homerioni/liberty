@@ -39,6 +39,9 @@
 @import "prices/page-price-block";
 @import "prices/callback";
 
+@import "doctors/doctor-resume";
+@import "doctors/doctor-licenses";
+
 body.lock {
   overflow: hidden;
 }

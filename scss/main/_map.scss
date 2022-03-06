@@ -15,6 +15,47 @@
     height: 16.2rem !important;
     background-size: cover !important;
   }
+
+  &--contacts {
+    #map {
+      flex: none;
+      width: 126.5rem;
+      margin-right: 6rem;
+      margin-left: -7rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__text-block {}
+
+  &__text {
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.98rem;
+    text-decoration: underline;
+
+    > svg {
+      width: 0.9rem;
+      height: 1.8rem;
+      margin-left: 0.9rem;
+
+      path {
+        stroke: #171923;
+      }
+    }
+  }
 }
 
 @media (max-width: 48em) {
@@ -30,6 +71,36 @@
       top: -25.4rem !important;
       width: 57.5rem !important;
       height: 26.4rem !important;
+    }
+
+    &--contacts {
+      #map {
+        width: 100%;
+        margin: 0 0 6rem 0;
+      }
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__text-block {}
+
+    &__text {
+      margin-bottom: 5rem;
+      font-size: 4rem;
+      line-height: 4.8rem;
+    }
+
+    &__link {
+      font-size: 3.2rem;
+      line-height: 3.96rem;
+
+      > svg {
+        width: 1.8rem;
+        height: 3.6rem;
+        margin-left: 1.8rem;
+      }
     }
   }
 }
