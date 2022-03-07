@@ -1,6 +1,9 @@
 'use strict';
 
 $(document).ready(function () {
+    // Маска для тедефона
+    $('.input-phone').mask('+7 (999) 999-99-99');
+
     // Настройка оценок для отзывов
     $('.review-rating').each(function () {
         let rating = $(this).attr('rating');
@@ -85,6 +88,114 @@ $(document).ready(function () {
         }, 100)
         tab.parent().find('.prices').slideToggle(500);
     });
+
+    // Закрытие для модальных
+    let close = function (modal) {
+        modal.removeClass('open');
+        setTimeout(function () {
+            modal.removeClass('send');
+        }, 300);
+    };
+
+    // Модальное окно modal-callback
+    $('.popup-callback').click(function () {
+        $('.modal-callback').addClass('open');
+    });
+    $('.modal-callback__start-btn').click(function () {
+        $('.modal-callback').addClass('send');
+    });
+    $('.modal-callback__close').click(function () {
+        close($('.modal-callback'));
+    });
+    $('.modal-callback__finish-btn').click(function () {
+        close($('.modal-callback'));
+    });
+    $('.modal-callback__bg').click(function () {
+        close($('.modal-callback'));
+    });
+
+    // Модальное окно modal-help
+    $('.popup-help').click(function () {
+        $('.modal-help').addClass('open');
+    });
+    $('.modal-help__start-btn').click(function () {
+        $('.modal-help').addClass('send');
+    });
+    $('.modal-help__close').click(function () {
+        close($('.modal-help'));
+    });
+    $('.modal-help__finish-btn').click(function () {
+        close($('.modal-help'));
+    });
+    $('.modal-help__bg').click(function () {
+        close($('.modal-help'));
+    });
+
+    // Галерея для одной фотки
+    $('.open-gallery').click(function () {
+        $('.modal-gallery__body').html('<img src="' + $(this).parent().find('img').attr('src') + '" alt="">');
+        $('.modal-gallery').addClass('open');
+    });
+    $('.modal-gallery__close').click(function () {
+        close($('.modal-gallery'));
+    });
+    $('.modal-gallery__bg').click(function () {
+        close($('.modal-gallery'));
+    });
+
+    // Галерея лицензий
+    $('.licenses-gallery').click(function () {
+        $('.modal-licenses-gallery').addClass('open');
+    });
+    $('.modal-licenses-gallery__close').click(function () {
+        close($('.modal-licenses-gallery'));
+    });
+    $('.modal-licenses-gallery__bg').click(function () {
+        close($('.modal-licenses-gallery'));
+    });
+
+    // Модальное окно modal-calculate
+    $('.popup-calculate').click(function () {
+        $('.modal-calculate').addClass('open');
+    });
+    $('.modal-calculate__btn--one').click(function () {
+        $('.modal-calculate').addClass('two');
+    });
+    $('.modal-calculate__btn--two').click(function () {
+        $('.modal-calculate').removeClass('two').addClass('three');
+    });
+    $('.modal-calculate__btn--three').click(function () {
+        $('.modal-calculate').removeClass('three').addClass('finish');
+    });
+    $('.modal-calculate__close').click(function () {
+        $('.modal-calculate').removeClass('open');
+        setTimeout(function () {
+            $('.modal-calculate').removeClass('two three finish');
+        }, 500);
+    });
+    $('.modal-calculate__bg').click(function () {
+        $('.modal-calculate').removeClass('open');
+        setTimeout(function () {
+            $('.modal-calculate').removeClass('two three finish');
+        }, 300);
+    });
+    $('.modal-calculate__btn--finish').click(function () {
+        $('.modal-calculate').removeClass('open');
+        setTimeout(function () {
+            $('.modal-calculate').removeClass('two three finish');
+        }, 300);
+    });
+    if (!$('.modal-calculate').hasClass('finish')) {
+        $('.modal-calculate__step-item--one').click(function () {
+            $('.modal-calculate').removeClass('two three');
+        });
+        $('.modal-calculate__step-item--two').click(function () {
+            $('.modal-calculate').removeClass('three').addClass('two');
+        });
+        $('.modal-calculate__step-item--three').click(function () {
+            $('.modal-calculate').removeClass('two').addClass('three');
+        });
+    }
 });
 
 let map_icon;

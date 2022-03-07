@@ -6,6 +6,13 @@ const intro_slider = new Swiper('.intro', {
     loop: true,
     speed: 400,
 
+    breakpoints: {
+        769: {
+            allowTouchMove: false,
+        },
+        0: {},
+    },
+
     navigation: {
         nextEl: '.intro__navigation-arrow-right',
         prevEl: '.intro__navigation-arrow-left',
@@ -63,21 +70,27 @@ if ($(document).width() >= 768) {
         breakpoints: {
             3000: {
                 spaceBetween: 70,
+                allowTouchMove: false,
             },
             1920: {
                 spaceBetween: 45,
+                allowTouchMove: false,
             },
             1600: {
                 spaceBetween: 37.5,
+                allowTouchMove: false,
             },
             1300: {
                 spaceBetween: 32,
+                allowTouchMove: false,
             },
             1024: {
                 spaceBetween: 25,
+                allowTouchMove: false,
             },
             769: {
                 spaceBetween: 20,
+                allowTouchMove: false,
             },
             0: {
                 enabled: false,
@@ -377,4 +390,16 @@ const gallery_slider = new Swiper('.gallery__slider', {
             }
         },
     }
+});
+
+const modal_licenses_gallery_slider = new Swiper('.modal-licenses-gallery__slider', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    speed: 400,
+    spaceBetween: 1000,
+
+    navigation: {
+        nextEl: '.modal-licenses-gallery__arrow--right',
+        prevEl: '.modal-licenses-gallery__arrow--left',
+    },
 });

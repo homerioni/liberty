@@ -53,6 +53,10 @@
     &--min {
       width: 6.6rem;
       height: 9.6rem;
+
+      &:nth-child(n + 5) {
+        display: none;
+      }
     }
   }
 
@@ -78,6 +82,7 @@
     font-size: 1.6rem;
     line-height: 1.98rem;
     text-decoration: underline;
+    cursor: pointer;
 
     > svg {
       width: 0.9rem;
