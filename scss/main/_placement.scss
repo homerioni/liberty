@@ -73,14 +73,39 @@
     }
 
     .swiper-pagination-bullet {
-      width: 1.1rem;
-      height: 1.1rem;
+      width: 23px;
+      height: 23px;
       margin: 0 0.65rem !important;
       opacity: 0.6;
       border: 1px solid rgba(255, 255, 255, 1);
       background: linear-gradient(195.05deg, rgba(49, 142, 136, 0.4) -22.32%, rgba(115, 193, 168, 0.4) 96.92%),
       linear-gradient(0deg, #FFFFFF, #FFFFFF);
       box-shadow: 0.1rem 0.1rem 0.55rem 0 rgba(255, 255, 255, 0.6) inset, 0 0.9rem 2.75rem 0 rgba(233, 240, 245, 1);
+
+      @media (max-width: 3000px) {
+        width: 15px;
+        height: 15px;
+      }
+
+      @media (max-width: 2000px) {
+        width: 11px;
+        height: 11px;
+      }
+
+      @media (max-width: 1600px) {
+        width: 9px;
+        height: 9px;
+      }
+
+      @media (max-width: 1200px) {
+        width: 7px;
+        height: 7px;
+      }
+
+      @media (max-width: 1000px) {
+        width: 6px;
+        height: 6px;
+      }
     }
 
     .swiper-pagination-bullet-active {
@@ -223,10 +248,25 @@
       }
 
       .swiper-pagination-bullet {
-        width: 1.6rem;
-        height: 1.6rem;
+        width: 16px;
+        height: 16px;
         margin: 0 1.2rem !important;
         opacity: 0.6;
+
+        @media (max-width: 600px) {
+          width: 12px;
+          height: 12px;
+        }
+
+        @media (max-width: 500px) {
+          width: 10px;
+          height: 10px;
+        }
+
+        @media (max-width: 375px) {
+          width: 8px;
+          height: 8px;
+        }
       }
     }
 
