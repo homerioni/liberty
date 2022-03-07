@@ -1,6 +1,13 @@
 'use strict';
 
 $(document).ready(function () {
+    let body_lock = function () {
+        $('body').addClass('lock');
+    };
+    let body_unlock = function () {
+        $('body').removeClass('lock');
+    };
+
     // Маска для тедефона
     $('.input-phone').mask('+7 (999) 999-99-99');
 
@@ -28,11 +35,11 @@ $(document).ready(function () {
     // Бургер меню
     $('.header__burger-icon').click(function () {
         $('.header__menu').addClass('open');
-        $('body').addClass('lock');
+        body_lock();
     });
     $('.header__menu-close').click(function () {
         $('.header__menu').removeClass('open');
-        $('body').removeClass('lock');
+        body_unlock()
     });
 
     // Секция list-services
@@ -95,11 +102,13 @@ $(document).ready(function () {
         setTimeout(function () {
             modal.removeClass('send');
         }, 300);
+        body_unlock();
     };
 
     // Модальное окно modal-callback
     $('.popup-callback').click(function () {
         $('.modal-callback').addClass('open');
+        body_lock();
     });
     $('.modal-callback__start-btn').click(function () {
         $('.modal-callback').addClass('send');
@@ -117,6 +126,7 @@ $(document).ready(function () {
     // Модальное окно modal-help
     $('.popup-help').click(function () {
         $('.modal-help').addClass('open');
+        body_lock();
     });
     $('.modal-help__start-btn').click(function () {
         $('.modal-help').addClass('send');
@@ -135,6 +145,7 @@ $(document).ready(function () {
     $('.open-gallery').click(function () {
         $('.modal-gallery__body').html('<img src="' + $(this).parent().find('img').attr('src') + '" alt="">');
         $('.modal-gallery').addClass('open');
+        body_lock();
     });
     $('.modal-gallery__close').click(function () {
         close($('.modal-gallery'));
@@ -146,6 +157,7 @@ $(document).ready(function () {
     // Галерея лицензий
     $('.licenses-gallery').click(function () {
         $('.modal-licenses-gallery').addClass('open');
+        body_lock();
     });
     $('.modal-licenses-gallery__close').click(function () {
         close($('.modal-licenses-gallery'));
@@ -157,6 +169,7 @@ $(document).ready(function () {
     // Модальное окно modal-calculate
     $('.popup-calculate').click(function () {
         $('.modal-calculate').addClass('open');
+        body_lock();
     });
     $('.modal-calculate__btn--one').click(function () {
         $('.modal-calculate').addClass('two');
@@ -171,19 +184,22 @@ $(document).ready(function () {
         $('.modal-calculate').removeClass('open');
         setTimeout(function () {
             $('.modal-calculate').removeClass('two three finish');
-        }, 500);
+        }, 300);
+        body_unlock();
     });
     $('.modal-calculate__bg').click(function () {
         $('.modal-calculate').removeClass('open');
         setTimeout(function () {
             $('.modal-calculate').removeClass('two three finish');
         }, 300);
+        body_unlock();
     });
     $('.modal-calculate__btn--finish').click(function () {
         $('.modal-calculate').removeClass('open');
         setTimeout(function () {
             $('.modal-calculate').removeClass('two three finish');
         }, 300);
+        body_unlock();
     });
     if (!$('.modal-calculate').hasClass('finish')) {
         $('.modal-calculate__step-item--one').click(function () {
