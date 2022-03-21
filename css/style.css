@@ -468,6 +468,7 @@ input[type=number] {
   color: #fff;
 }
 .header__main {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -597,7 +598,7 @@ input[type=number] {
     display: flex;
     position: absolute;
     left: -70%;
-    top: 14.4rem;
+    top: 0;
     z-index: 5;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -618,6 +619,7 @@ input[type=number] {
             box-shadow: 2rem 0 3rem 0 rgba(0, 0, 0, 0.15);
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
+    overflow-y: scroll;
   }
   .header__menu.open {
     left: 0;
