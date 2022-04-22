@@ -21,6 +21,9 @@
   }
 
   &__slider {
+    .swiper-wrapper {
+      height: auto;
+    }
   }
 
   &__item {

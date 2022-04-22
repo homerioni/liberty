@@ -5,18 +5,17 @@
 
   &__block {
     display: flex;
+    align-items: center;
     width: 100%;
-    //min-height: 32.3rem;
     border-radius: 3rem;
-    background-color: $white;
+    background: linear-gradient(90deg, #2F8D88 3%, #6DB197 35%, white 35%);
   }
 
   &__info-block {
     flex: none;
     width: 47.9rem;
-    padding: 5.6rem 10rem 5.6rem 3.9rem;
+    padding: 0 10rem 0 3.9rem;
     border-radius: 3rem 0 0 3rem;
-    background: linear-gradient(147.03deg, #2F8D88 19.67%, #6DB197 74.14%);
     color: $white;
   }
 
@@ -63,15 +62,15 @@
   }
 
   &__text-block {
+    padding: 0 6rem 0 7rem;
   }
 
   &__citation {
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 11.5rem;
-    margin: 4.2rem 8.3rem 3.2rem 6.3rem;
-    padding: 2rem 5.4rem 1.3rem 9.5rem;
+    margin: 4.2rem 0 3.2rem 0;
+    padding: 2rem 2.5rem 2rem 9.5rem;
     border-radius: 4rem;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.46)),
     linear-gradient(269.75deg, #7CCEBB 1.79%, #55B39A 98.53%);
@@ -84,10 +83,11 @@
 
   &__text-block-icon {
     position: absolute;
-    top: 0;
-    left: -4.2rem;
-    width: 11.5rem;
-    height: 11.5rem;
+    top: 50%;
+    left: -4rem;
+    width: 11rem;
+    height: 11rem;
+    transform: translateY(-50%);
     border-radius: 100%;
     box-shadow: 0 1.12rem 3.36rem 0 rgba(233, 240, 245, 1);
 
@@ -99,7 +99,7 @@
   }
 
   &__text {
-    margin: 2.5rem 8.3rem 3.2rem 6.3rem;
+    margin: 2.5rem 0 3.2rem 0;
     font-size: 1.8rem;
     line-height: 2.16rem;
   }
@@ -113,11 +113,12 @@
       flex-direction: column;
       min-height: 90rem;
       border-radius: 8rem;
+      background: linear-gradient(#2F8D88 0%, #6DB197 70rem, white 70rem);
     }
 
     &__info-block {
       width: 100%;
-      padding: 8rem 4rem 18rem 4rem;
+      padding: 12rem 4rem 19rem 4rem;
       border-radius: 4rem 4rem 0 0;
     }
 
@@ -144,17 +145,19 @@
     }
 
     &__image-block {
-      max-width: 58.8rem;
-      max-height: 58.8rem;
-      margin: -16.3rem auto 5.57rem auto;
+      width: 100%;
+      max-width: none;
+      max-height: none;
+      margin: -16.3rem auto 12rem auto;
     }
 
     &__text-block {
+      padding: 0 4rem;
     }
 
     &__citation {
-      margin: 0 4.2rem 5rem 6rem;
-      padding: 4rem 3.8rem 4.2rem 14.6rem;
+      margin: 0 0 4rem 0;
+      padding: 8rem 4rem;
       border-radius: 8rem;
       box-shadow: 2px 2px 1rem 0 rgba(255, 255, 255, 0.6) inset, 0 1.8rem 5rem 0 rgba(255, 255, 255, 0.1);
       font-size: 3.2rem;
@@ -162,15 +165,16 @@
     }
 
     &__text-block-icon {
-      top: -3rem;
-      left: -2rem;
-      width: 14rem;
-      height: 14rem;
+      top: 0;
+      left: -0.8rem;
+      width: 11.6rem;
+      height: 11.6rem;
+      border: 0.8rem solid white;
       box-shadow: 0 2.2rem 6.7rem 0 rgba(233, 240, 245, 1);
     }
 
     &__text {
-      margin: 5rem 4rem 8rem 4rem;
+      margin: 5rem 0 8rem 0;
       font-size: 3.2rem;
       line-height: 3.7rem;
     }
