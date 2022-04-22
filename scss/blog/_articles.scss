@@ -57,10 +57,11 @@
 
   &__citation-icon {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: -4.2rem;
     width: 11.5rem;
     height: 11.5rem;
+    transform: translateY(-50%);
     border-radius: 100%;
     box-shadow: 0 1.12rem 3.36rem 0 rgba(233, 240, 245, 1);
 

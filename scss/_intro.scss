@@ -3,6 +3,10 @@
 .intro {
   margin-bottom: 16rem;
 
+  .swiper-wrapper {
+    height: auto;
+  }
+
   &__item {
     position: relative;
     background-color: #F2F7FB;

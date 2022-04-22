@@ -14,6 +14,7 @@
   }
 
   &__main {
+    position: relative;
     display: flex;
     align-items: center;
     height: 9.5rem;
@@ -135,7 +136,7 @@
       display: flex;
       position: absolute;
       left: -70%;
-      top: 14.4rem;
+      top: 0;
       z-index: 5;
       flex-direction: column;
       justify-content: normal;
@@ -147,6 +148,7 @@
       background-color: #E2ECF2;
       box-shadow: 2rem 0 3rem 0 rgba(0, 0, 0, 0.15);
       transition: 0.5s ease;
+      overflow-y: scroll;
 
       &.open {
         left: 0;
