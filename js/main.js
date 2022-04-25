@@ -41,6 +41,12 @@ $(document).ready(function () {
         $('.header__menu').removeClass('open');
         body_unlock()
     });
+    if ($(window).width() <= 768) {
+        $('.header__menu-item svg').click(function () {
+            $(this).parent().find('> .header__menu-sub-list').slideToggle();
+            $(this).toggleClass('open');
+        });
+    }
 
     // Секция list-services
     $('.list-services__title-block').click(function () {
@@ -212,6 +218,7 @@ $(document).ready(function () {
             $('.modal-calculate').removeClass('two').addClass('three');
         });
     }
+
 });
 
 let map_icon;
