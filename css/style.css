@@ -516,7 +516,7 @@ input[type=number] {
 .header__menu-item {
   position: relative;
   z-index: 2;
-  margin-right: 2.5rem;
+  margin-right: 2rem;
   font-family: "Circe", sans-serif;
   font-size: 1.8rem;
   line-height: 2.65rem;
