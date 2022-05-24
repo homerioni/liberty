@@ -52,6 +52,7 @@
     border-radius: 100%;
     background-color: #C4CEDA;
     overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 
     &:before {
       content: '';

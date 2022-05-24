@@ -199,6 +199,7 @@ input[type=number] {
   border-radius: 100%;
   background-color: #C4CEDA;
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .navigation-block__navigation-time-block:before {
   content: "";
@@ -516,7 +517,7 @@ input[type=number] {
 .header__menu-item {
   position: relative;
   z-index: 2;
-  margin-right: 2rem;
+  margin-right: 1.8rem;
   font-family: "Circe", sans-serif;
   font-size: 1.8rem;
   line-height: 2.65rem;
