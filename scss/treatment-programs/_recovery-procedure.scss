@@ -15,12 +15,14 @@
   }
 
   &__text-block {
-    margin-right: 1.5rem;
+    order: 2;
+    margin-left: 4rem;
     font-size: 2rem;
     line-height: 2.32rem;
   }
 
   &__after-item {
+    order: 1;
     flex: none;
     position: relative;
     width: 36.4rem;
@@ -214,7 +216,8 @@
     }
 
     &__text-block {
-      margin-right: 0;
+      order: 1;
+      margin-left: 0;
       margin-bottom: 6rem;
       font-size: 3.2rem;
       line-height: 3.7rem;
@@ -231,6 +234,7 @@
     }
 
     &__text-block-btn {
+      order: 2;
       align-items: center;
       margin-bottom: 10rem;
       font-weight: bold;
@@ -254,6 +258,7 @@
     }
 
     &__after-item {
+      order: 3;
       width: 100%;
       margin-bottom: 10rem;
       border-radius: 8rem;
