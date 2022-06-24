@@ -7085,6 +7085,11 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+.recovery-procedure__content .after-item {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
 .recovery-procedure__text-block {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -7312,6 +7317,11 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .recovery-procedure__content .after-item {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .recovery-procedure__text-block {
     -webkit-box-ordinal-group: 2;

@@ -12,6 +12,10 @@
 
   &__content {
     display: flex;
+
+    .after-item {
+      flex: none;
+    }
   }
 
   &__text-block {
@@ -213,6 +217,10 @@
 
     &__content {
       flex-direction: column;
+
+      .after-item {
+        order: 3;
+      }
     }
 
     &__text-block {
