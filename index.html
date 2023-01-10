@@ -4,364 +4,314 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="another website">
-    <title>Liberty</title>
+    <title>Страницы</title>
 
-    <link rel="stylesheet" href="css/font/stylesheet.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="font/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
 
-<style>
-    ol {
-        margin-left: 5rem;
-    }
-    ol li {
-        margin-bottom: 2rem;
-        font-size: 3rem;
-        text-decoration: underline;
-        cursor: pointer;
-    }
-</style>
+    <!--Стили для этой странички-->
+    <style>
+        html,
+        body {
+            padding-bottom: 0;
+            /*--color: rgba(0, 187, 255, 1);*/
+            /*--color-transparent: rgba(0, 187, 255, 0.7);*/
+        }
+
+        .index {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4.4rem;
+            width: 100%;
+            min-height: 100vh;
+            padding: 10rem;
+        }
+
+        .index:before {
+            content: '';
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-100%);
+            background: linear-gradient(rgb(20, 20, 20) 20%, var(--color-transparent) 50%, rgb(20, 20, 20) 80%);
+            animation: bg 4.8s linear 1s infinite;
+        }
+
+        @keyframes bg {
+            from {
+                transform: translateY(-200%);
+            }
+
+            to {
+                transform: translateY(200%);
+            }
+        }
+
+        .index:after {
+            content: '';
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(20, 20, 20);
+        }
+
+        .index__bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .index__item {
+            position: relative;
+            z-index: 5;
+            display: block;
+            min-width: 80rem;
+            padding: 2.5rem 6rem;
+            border-radius: 3rem;
+            border: 1px solid var(--color-transparent);
+            font-size: 4.4rem;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            transition: transform .5s ease;
+        }
+
+        @media (min-width: 48.01em) {
+            .index__item:nth-child(odd) {
+                transform: translateX(-8rem);
+            }
+
+            .index__item:nth-child(even) {
+                transform: translateX(8rem);
+            }
+        }
+
+        .index__item:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: -2;
+            width: 105%;
+            height: 120%;
+            transform: translate(-50%, -50%) scale(0.95, 0.83);
+            border-radius: inherit;
+            filter: blur(1rem);
+            background-color: var(--color);
+            transition: transform .5s ease, filter .5s ease;
+        }
+        .index__item:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background-color: #303030;
+        }
+
+        .index__item:hover:before {
+            transform: translate(-50%, -50%) scale(1);
+            filter: blur(1.5rem);
+        }
+
+        .animation-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .stagger-visualizer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-origin: left top;
+        }
+
+        .stagger-visualizer .dots-wrapper {
+            transform: translateZ(0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stagger-visualizer .dot {
+            position: relative;
+            z-index: 1;
+            width: 7.77%;
+            height: 14.9rem;
+            margin: 0.5rem;
+            /*background-color: #363636;*/
+            transition: background-color 1.5s ease;
+            border-radius: 8px;
+            background: #202020;
+            box-shadow: inset 9px 9px 18px #171717,
+            inset -9px -9px 18px #292929;
+            will-change: transform;
+        }
+
+        .stagger-visualizer .dot.active {
+            background-color: var(--color);
+        }
+
+        .stagger-visualizer .dot:hover {
+            background-color: var(--color);
+            transition: background-color .1s ease;
+        }
+
+        @media (max-width: 48em) {
+            .stagger-visualizer .dot {
+                width: 18.6%;
+                height: 13.8rem;
+            }
+
+            .index {
+                gap: 4.4rem;
+                padding: 10rem 4rem;
+            }
+
+            .index__item {
+                min-width: auto;
+                width: 100%;
+                padding: 2.5rem 4rem;
+                border-radius: 100rem;
+            }
+
+            .index__item:before {
+                transform: translate(-50%, -50%) scale(0.97, 0.88);
+            }
+        }
+    </style>
+    <!--/Стили для этой странички-->
+</head>
 <body>
 
-<ol>
-    <li>
-        <a href="main.html">Главная</a>
-    </li>
-    <li>
-        <a href="treatment-programs.html">Программы лечения</a>
-    </li>
-    <li>
-        <a href="about.html">О клинике</a>
-    </li>
-    <li>
-        <a href="blog.html">Блог</a>
-    </li>
-    <li>
-        <a href="article.html">Статья</a>
-    </li>
-    <li>
-        <a href="gameromania.html">Игромания</a>
-    </li>
-    <li>
-        <a href="drug-hospital.html">Наркологический стационар</a>
-    </li>
-    <li>
-        <a href="medical-services.html">Медицинские услуги</a>
-    </li>
-    <li>
-        <a href="prices.html">Цены</a>
-    </li>
-    <li>
-        <a href="doctors.html">Наши врачи</a>
-    </li>
-    <li>
-        <a href="contacts.html">Контакты</a>
-    </li>
-    <li>
-        <a href="rehabilitation.html">Реабилитация</a>
-    </li>
-    <li class="popup-callback">
-        Первое модальное окно
-    </li>
-    <li class="popup-help">
-        Второе модальное окно
-    </li>
-    <li class="popup-calculate">
-        Третье модальное окно
-    </li>
-</ol>
-
-<div class="modal-callback">
-    <div class="modal-callback__bg"></div>
-    <div class="modal-callback__body">
-        <div class="modal-callback__close">
-            <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.0219 0.646447L1.02192 15.6464L1.72902 16.3536L16.729 1.35355L16.0219 0.646447ZM0.646447 1.35355L15.6464 16.3536L16.3536 15.6464L1.35355 0.646447L0.646447 1.35355Z" />
-            </svg>
-        </div>
-        <div class="modal-callback__start">
-            <div class="modal-callback__start-title">
-                Оставьте анонимную заявку
-            </div>
-            <form class="modal-callback__form">
-                <input type="text" placeholder="+7 (___) ___-__-__" class="modal-callback__input input-phone" required>
-                <button class="modal-callback__start-btn title-block__btn">
-                    <span>Отправить</span>
-                    <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12.5" cy="12.5" r="12.5" />
-                        <path d="M11 16L15 12.5059L11 9.01184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </form>
-            <div class="modal-callback__start-description">
-                Отправляя форму, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
-            </div>
-        </div>
-        <div class="modal-callback__finish">
-            <div class="modal-callback__finish-title">Заявка отправлена</div>
-            <div class="modal-callback__finish-sub-title">Ожидайте звонка</div>
-            <div class="modal-callback__finish-description">Доктор свяжется с вами в течение 28 секунд</div>
-            <button class="modal-callback__finish-btn title-block__btn">
-                <span>Спасибо</span>
-                <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12.5" cy="12.5" r="12.5" />
-                    <path d="M11 16L15 12.5059L11 9.01184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-</div>
-<div class="modal-help">
-    <div class="modal-help__bg"></div>
-    <div class="modal-help__body">
-        <div class="modal-help__start">
-            <div class="modal-help__close">
-                <span>Спасибо, сначала изучу ваш сайт</span>
-                <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.0219 0.646447L1.02192 15.6464L1.72902 16.3536L16.729 1.35355L16.0219 0.646447ZM0.646447 1.35355L15.6464 16.3536L16.3536 15.6464L1.35355 0.646447L0.646447 1.35355Z" />
-                </svg>
-            </div>
-            <div class="modal-help__start-title">
-                Срочно нужна помощь!
-            </div>
-            <div class="modal-help__start-sub-title">
-                Доктор перезвонит в течение 28 секунд и сможет оказать необходимую помощь
-            </div>
-            <form class="modal-help__form">
-                <input type="text" placeholder="+7 (___) ___-__-__" class="modal-help__input input-phone" required>
-                <button class="modal-help__start-btn title-block__btn">
-                    <span>Отправить</span>
-                    <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12.5" cy="12.5" r="12.5" />
-                        <path d="M11 16L15 12.5059L11 9.01184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </form>
-            <div class="modal-help__start-description">
-                Отправляя форму, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
-            </div>
-        </div>
-        <div class="modal-help__finish">
-            <div class="modal-help__close">
-                <span>Спасибо</span>
-                <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.0219 0.646447L1.02192 15.6464L1.72902 16.3536L16.729 1.35355L16.0219 0.646447ZM0.646447 1.35355L15.6464 16.3536L16.3536 15.6464L1.35355 0.646447L0.646447 1.35355Z" />
-                </svg>
-            </div>
-            <div class="modal-help__finish-title">Срочно нужна помощь!</div>
-            <div class="modal-help__finish-description">
-                Начните лечение уже сегодня, наши специалисты работают круглосуточно
-            </div>
-            <div class="modal-help__finish-sub-title">
-                Заявка отправлена. Ожидайте звонка
-            </div>
-            <div class="modal-help__finish-description">Доктор свяжется с вами в течение 28 секунд</div>
-            <button class="modal-help__finish-btn title-block__btn">
-                <span>Спасибо</span>
-                <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12.5" cy="12.5" r="12.5" />
-                    <path d="M11 16L15 12.5059L11 9.01184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-</div>
-<!--  В блок modal-licenses-gallery закидываем все фотки лицензий  -->
-<div class="modal-licenses-gallery">
-    <div class="modal-licenses-gallery__bg"></div>
-    <div class="modal-licenses-gallery__close">
-        <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16.0219 0.646447L1.02192 15.6464L1.72902 16.3536L16.729 1.35355L16.0219 0.646447ZM0.646447 1.35355L15.6464 16.3536L16.3536 15.6464L1.35355 0.646447L0.646447 1.35355Z" />
-        </svg>
-    </div>
-    <div class="modal-licenses-gallery__body">
-        <div class="modal-licenses-gallery__slider swiper">
-            <div class="modal-licenses-gallery__wrapper swiper-wrapper">
-                <div class="modal-licenses-gallery__item swiper-slide">
-                    <img src="img/licenses-image1.png" alt="">
-                </div>
-                <div class="modal-licenses-gallery__item swiper-slide">
-                    <img src="img/licenses-image2.png" alt="">
-                </div>
+<div class="index">
+    <div class="index__bg">
+        <div class="animation-wrapper">
+            <div class="stagger-visualizer">
+                <div class="dots-wrapper"></div>
             </div>
         </div>
     </div>
-    <div class="modal-licenses-gallery__arrow modal-licenses-gallery__arrow--left">
-        <svg viewBox="0 0 15 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.9531 22L1.95312 11.5178L13.9531 1.03552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </div>
-    <div class="modal-licenses-gallery__arrow modal-licenses-gallery__arrow--right">
-        <svg viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 22L13 11.5178L1 1.03552" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </div>
-</div>
-<div class="modal-gallery">
-    <div class="modal-gallery__bg"></div>
-    <div class="modal-gallery__close">
-        <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16.0219 0.646447L1.02192 15.6464L1.72902 16.3536L16.729 1.35355L16.0219 0.646447ZM0.646447 1.35355L15.6464 16.3536L16.3536 15.6464L1.35355 0.646447L0.646447 1.35355Z" />
-        </svg>
-    </div>
-    <div class="modal-gallery__body">
-    </div>
-</div>
-<div class="modal-calculate">
-    <div class="modal-calculate__bg"></div>
-    <div class="modal-calculate__body">
-        <div class="modal-calculate__step">
-            <div class="modal-calculate__step-item modal-calculate__step-item--one">1</div>
-            <div class="modal-calculate__step-line"></div>
-            <div class="modal-calculate__step-item modal-calculate__step-item--two">2</div>
-            <div class="modal-calculate__step-line"></div>
-            <div class="modal-calculate__step-item modal-calculate__step-item--three">3</div>
-        </div>
-        <div class="modal-calculate__content">
-            <div class="modal-calculate__close modal-calculate__close--finish">
-                <span>Спасибо</span>
-                <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.0219 0.646447L1.02192 15.6464L1.72902 16.3536L16.729 1.35355L16.0219 0.646447ZM0.646447 1.35355L15.6464 16.3536L16.3536 15.6464L1.35355 0.646447L0.646447 1.35355Z" />
-                </svg>
-            </div>
-            <div class="modal-calculate__title">Рассчет стоимости</div>
-            <div class="modal-calculate__description">
-                Начните свой путь выздоровления сегодня. Получите рассчет стоимости.
-            </div>
-            <form class="modal-calculate__form">
-                <div class="modal-calculate__close">
-                    <span>Спасибо, сначала изучу ваш сайт</span>
-                    <svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.0219 0.646447L1.02192 15.6464L1.72902 16.3536L16.729 1.35355L16.0219 0.646447ZM0.646447 1.35355L15.6464 16.3536L16.3536 15.6464L1.35355 0.646447L0.646447 1.35355Z" />
-                    </svg>
-                </div>
-                <div class="modal-calculate__form-block modal-calculate__form-block--one">
-                    <div class="modal-calculate__sub-title">Вид зависимости:</div>
-                    <div class="modal-calculate__selection">
-                        <label class="modal-calculate__label">
-                            <input type="radio" name="form-block-one">
-                            <div class="modal-calculate__checkbox">
-                                <img class="not-check" src="img/modal-calculate-checbox-not-check.svg" alt="">
-                                <img class="check" src="img/modal-calculate-checbox-check.svg" alt="">
-                            </div>
-                            <div class="modal-calculate__input-name">Алкоголь</div>
-                        </label>
-                        <label class="modal-calculate__label">
-                            <input type="radio" name="form-block-one">
-                            <div class="modal-calculate__checkbox">
-                                <img class="not-check" src="img/modal-calculate-checbox-not-check.svg" alt="">
-                                <img class="check" src="img/modal-calculate-checbox-check.svg" alt="">
-                            </div>
-                            <div class="modal-calculate__input-name">Игромания</div>
-                        </label>
-                        <label class="modal-calculate__label">
-                            <input type="radio" name="form-block-one">
-                            <div class="modal-calculate__checkbox">
-                                <img class="not-check" src="img/modal-calculate-checbox-not-check.svg" alt="">
-                                <img class="check" src="img/modal-calculate-checbox-check.svg" alt="">
-                            </div>
-                            <div class="modal-calculate__input-name">Наркотики</div>
-                        </label>
-                    </div>
-                    <div class="modal-calculate__btn modal-calculate__btn--one title-block__btn">
-                        <span>Продолжить</span>
-                        <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12.5" cy="12.5" r="12.5" />
-                            <path d="M11 16L15 12.5059L11 9.01184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="modal-calculate__form-block modal-calculate__form-block--two">
-                    <div class="modal-calculate__sub-title">Срок зависимости:</div>
-                    <div class="modal-calculate__selection">
-                        <label class="modal-calculate__label">
-                            <input type="radio" name="form-block-two">
-                            <div class="modal-calculate__checkbox">
-                                <img class="not-check" src="img/modal-calculate-checbox-not-check.svg" alt="">
-                                <img class="check" src="img/modal-calculate-checbox-check.svg" alt="">
-                            </div>
-                            <div class="modal-calculate__input-name">1-3 месяца</div>
-                        </label>
-                        <label class="modal-calculate__label">
-                            <input type="radio" name="form-block-two">
-                            <div class="modal-calculate__checkbox">
-                                <img class="not-check" src="img/modal-calculate-checbox-not-check.svg" alt="">
-                                <img class="check" src="img/modal-calculate-checbox-check.svg" alt="">
-                            </div>
-                            <div class="modal-calculate__input-name">6-12 месяцев</div>
-                        </label>
-                        <label class="modal-calculate__label">
-                            <input type="radio" name="form-block-two">
-                            <div class="modal-calculate__checkbox">
-                                <img class="not-check" src="img/modal-calculate-checbox-not-check.svg" alt="">
-                                <img class="check" src="img/modal-calculate-checbox-check.svg" alt="">
-                            </div>
-                            <div class="modal-calculate__input-name">Более 1 года</div>
-                        </label>
-                    </div>
-                    <div class="modal-calculate__btn modal-calculate__btn--two title-block__btn">
-                        <span>Продолжить</span>
-                        <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12.5" cy="12.5" r="12.5" />
-                            <path d="M11 16L15 12.5059L11 9.01184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="modal-calculate__form-block modal-calculate__form-block--three">
-                    <div class="modal-calculate__sub-title">Как получить рассчет?</div>
-                    <div class="modal-calculate__selection">
-                        <label class="modal-calculate__label">
-                            <input type="radio" name="form-block-three">
-                            <div class="modal-calculate__checkbox">
-                                <img class="not-check" src="img/modal-calculate-checbox-not-check.svg" alt="">
-                                <img class="check" src="img/modal-calculate-checbox-check.svg" alt="">
-                            </div>
-                            <div class="modal-calculate__input-name">Прислать на Whatsapp</div>
-                        </label>
-                        <label class="modal-calculate__label">
-                            <input type="radio" name="form-block-three">
-                            <div class="modal-calculate__checkbox">
-                                <img class="not-check" src="img/modal-calculate-checbox-not-check.svg" alt="">
-                                <img class="check" src="img/modal-calculate-checbox-check.svg" alt="">
-                            </div>
-                            <div class="modal-calculate__input-name">Позвонить и сообщить детали</div>
-                        </label>
-                    </div>
-                    <div class="modal-calculate__input-tel">
-                        <input type="text" placeholder="+7 (___) ___-__-__" class="modal-calculate__input input-phone" required>
-                        <button class="modal-calculate__btn modal-calculate__btn--three title-block__btn">
-                            <span>Отправить</span>
-                            <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12.5" cy="12.5" r="12.5" />
-                                <path d="M11 16L15 12.5059L11 9.01184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </form>
-            <div class="modal-calculate__form-block modal-calculate__finish-block">
-                <div class="modal-calculate__sub-title">
-                    Заявка отправлена. Ожидайте ответ на указанный вами способ связи
-                </div>
-                <div class="modal-calculate__description"></div>
-                <div class="modal-calculate__btn modal-calculate__btn--finish title-block__btn">
-                    <span>Спасибо</span>
-                    <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12.5" cy="12.5" r="12.5" />
-                        <path d="M11 16L15 12.5059L11 9.01184" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </div>
+    <a href="./main.html" target="_blank" class="index__item">Главная</a>
+    <a href="./news.html" target="_blank" class="index__item">Новости</a>
+    <a href="./history.html" target="_blank" class="index__item">История компании</a>
+    <a href="./online-store.html" target="_blank" class="index__item">Интернет магазин</a>
+    <a href="./validator.html" target="_blank" class="index__item">Проверка подлиности</a>
+    <a href="./corp.html" target="_blank" class="index__item">Корпоративная жизнь</a>
+    <a href="./corp-photo.html" target="_blank" class="index__item">Корпоративная жизнь, фото</a>
+    <a href="./video.html" target="_blank" class="index__item">Видеообзоры</a>
+    <a href="./media-center.html" target="_blank" class="index__item">Медиацентр</a>
+    <a href="./media-photo.html" target="_blank" class="index__item">Медиацентр, фото</a>
+    <a href="./contacts.html" target="_blank" class="index__item">Контакты</a>
+    <a href="./products.html" target="_blank" class="index__item">Продукция</a>
+    <a href="./production.html" target="_blank" class="index__item">Производство</a>
+    <a href="./company.html" target="_blank" class="index__item">Компания</a>
+    <a href="./catalog-category.html" target="_blank" class="index__item">Каталог категории</a>
+    <a href="./catalog.html" target="_blank" class="index__item">Каталог</a>
+    <a href="./product.html" target="_blank" class="index__item">Карточка товара</a>
+    <a href="./information.html" target="_blank" class="index__item">Информационные материалы</a>
+    <a href="./docs.html" target="_blank" class="index__item">Техническая документация</a>
+    <a href="./career.html" target="_blank" class="index__item">Карьера</a>
+    <a href="./reviews.html" target="_blank" class="index__item">Отзывы</a>
+    <a href="./404.html" target="_blank" class="index__item">404</a>
+    <a href="./article.html" target="_blank" class="index__item">Статья</a>
+    <a href="./news-page.html" target="_blank" class="index__item">Страница новости</a>
 </div>
 
 
-<script src="js/swiper-bundle.min.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/jquery.maskedinput.min.js"></script>
-<script src="js/swiper.js"></script>
-<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    let color = [
+        ['rgba(151, 80, 255, 1)', 'rgba(151, 80, 255, 0.7)'],
+        ['rgba(0, 255, 0, 1)', 'rgba(0, 255, 0, 0.7)'],
+        ['rgba(255, 183, 0, 1)', 'rgba(255, 183, 0, 0.7)'],
+        ['rgba(0, 187, 255, 1)', 'rgba(0, 187, 255, 0.7)'],
+        ['rgba(0, 255, 218, 1)', 'rgba(0, 255, 218, 0.7)'],
+    ][Math.floor(Math.random() * 5)];
+    $('body').css('--color', color[0]).css('--color-transparent', color[1]);
+
+    const indexAnime = (function() {
+
+        let dotsWrapperEl = $('.dots-wrapper');
+        let dotsFragment = $(document.createDocumentFragment());
+        let row = Math.ceil($(document).height() / $(document).width() * 12.5);
+        let rowMob = Math.ceil($(document).height() / $(document).width() * 5);
+        let grid;
+        if ($(window).width() > 768) {
+            grid = [12, row];
+        } else {
+            grid = [5, rowMob];
+        }
+        let numberOfElements = grid[0] * grid[1];
+        let animation;
+
+        for (let i = 0; i < numberOfElements; i++) {
+            dotsFragment.append('<div class="dot"></div>');
+        }
+
+        dotsWrapperEl.append(dotsFragment);
+
+        let index = anime.random(0, numberOfElements-1);
+
+        function play() {
+            if (animation) animation.pause();
+
+            index = anime.random(0, numberOfElements-1);
+
+            animation = anime.timeline({
+                easing: 'easeInOutQuad',
+                complete: play
+            })
+                .add({
+                    targets: '.stagger-visualizer .dot',
+                    keyframes: [
+                        {
+                            translateX: anime.stagger('-2px', {grid: grid, from: index, axis: 'x'}),
+                            translateY: anime.stagger('-2px', {grid: grid, from: index, axis: 'y'}),
+                            duration: 100
+                        }, {
+                            translateX: anime.stagger('2px', {grid: grid, from: index, axis: 'x'}),
+                            translateY: anime.stagger('2px', {grid: grid, from: index, axis: 'y'}),
+                            scale: anime.stagger([1, 0.8], {grid: grid, from: index}),
+                            duration: 225
+                        }, {
+                            translateX: 0,
+                            translateY: 0,
+                            scale: 1,
+                            duration: 1200,
+                        }, {
+                            duration: 1400,
+                        }
+                    ],
+                    delay: anime.stagger(80, {grid: grid, from: index})
+                }, 30)
+        }
+
+        play();
+
+    })();
+</script>
 </body>
 </html>
